@@ -1,0 +1,26 @@
+# Arch
+alias upgrade='paru -Syu'
+alias info='pacman -Qi '
+alias aur='pacman -Qm'
+
+# ls
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -la'
+
+# Git
+alias gs='git status'
+alias gc='git commit '
+alias gp='git push'
+alias gpo='git push origin'
+alias gco='git checkout '
+alias gb='git branch '
+alias gpl='git pull'
+alias gplo='git pull origin'
+
+# System
+alias reboot='systemctl reboot'
+alias shutdown='shutdown -h now'
+
+# grep
+alias grep='grep --color=auto'
