@@ -16,7 +16,7 @@ fi
 updates=$((updates_arch + updates_aur))
 
 if [ "$updates" -gt 0 ]; then
-    echo "# $updates"
+    echo " $updates"
 else
     echo ""
 fi

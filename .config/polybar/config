@@ -1,10 +1,10 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #aa303642
-background-alt = #414A59
+background = #aa222222
+background-alt = #aa444444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #5294E2
+foreground-alt = #fff
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -18,6 +18,7 @@ height = 30
 radius = 0.0
 fixed-center = true
 locale = pt_BR.UTF-8
+enable-ipc = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -42,8 +43,8 @@ font-4 = Font Awesome 5 Brands:pixelsize=10;1
 font-5 = Weather Icons:size=12;3
 
 modules-left = i3 xwindow
-modules-center = date 
-modules-right = openweathermap-simple filesystem pulseaudio memory cpu
+modules-center = 
+modules-right = updates-pacman-aurhelper openweathermap-simple pulseaudio memory cpu date powermenu 
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -56,22 +57,34 @@ tray-padding = 2
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/updates-pacman-aurhelper]
+type = custom/script
+exec = ~/.config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
+interval = 60
+
+[module/cpu-temp]
+type = custom/script
+exec = ~/.config/polybar/polybar-scripts/cpu-temperature.sh
+interval = 60
+label =  %output%
+
+[module/gpu-temp]
+type = custom/script
+exec = ~/.config/polybar/polybar-scripts/gpu-temperature.sh
+interval = 60
+label =  %output%
 
 [module/openweathermap-simple]
 type = custom/script
 exec = ~/.config/polybar/polybar-scripts/openweathermap-simple.sh 
 interval = 60
 label-font = 6
-
-[module/updates-pacman-aurhelper]
-type = custom/script
-exec = ~/.config/polybar/polybar-scripts/updates-pacman-aurhelper.sh
-interval = 300
 
 [module/system-cpu-temppercore]
 type = custom/script
@@ -103,8 +116,9 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
+mount-1 = /home
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -147,7 +161,7 @@ label-urgent-padding = 2
 
 ; icons
 ws-icon-0 = 1; 
-ws-icon-1 = 2;
+ws-icon-1 = 2;
 ws-icon-2 = 3; 
 ws-icon-3 = 4; 
 ws-icon-4 = 5;
@@ -184,7 +198,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #CC575D
+format-underline = #5294E2
 label = %percentage:2%%
 
 [module/memory]
@@ -192,7 +206,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #414A59
+format-underline = #5294E2 
 label = %percentage_used%%
 
 [module/wlan]
@@ -237,13 +251,13 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %a, %d/%m"
-date-alt = " %d-%m-%Y"
+date = ""
+date-alt= " %a, %d/%m"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #5294E2
 
@@ -252,7 +266,8 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> 
+;<bar-volume>
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -274,7 +289,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = #444444
 
 [module/temperature]
 type = internal/temperature
@@ -302,9 +317,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -317,10 +332,10 @@ menu-0-1-exec = menu-open-2
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = systemctl reboot
 
 menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = shutdown -h now
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
