@@ -24,3 +24,6 @@ alias shutdown='shutdown -h now'
 
 # grep
 alias grep='grep --color=auto'
+
+# vim
+alias vim='nvim'
