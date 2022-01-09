@@ -202,10 +202,17 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Virtual Machine Resolution
-exec xrandr --output Virtual-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+#exec xrandr --output Virtual-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
-# thunar shortcut
-bindsym $mod+e exec thunar
+# Resolution, keyboard layout, corectrl and numlock
+exec xrandr --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec setxkbmap -layout br
+#exec --no-startup-id /usr/lib/gsd-xsettings
+exec corectrl
+exec numlockx on
+
+# nautilus shortcut
+bindsym $mod+e exec nautilus
 
 # nitrogen
 exec_always nitrogen --restore
@@ -220,10 +227,26 @@ exec_always autotiling
 exec_always picom -b
 
 # polybar
-exec_always --no-startup-id polybar example -r 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # rofi calc
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # rofi emoji
 bindsym $mod+y exec rofi -show emoji -modi emoji
+
+# rofi alt-tab
+bindsym $mod+Tab exec rofi -show window
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Screenshot
+bindsym Print exec gnome-screenshot -i
+bindsym $mod+Print exec gnome-screenshot -a
+
+# ranger
+bindsym $mod+g exec alacritty -e ranger
