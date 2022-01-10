@@ -245,8 +245,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshot
-bindsym Print exec gnome-screenshot -i
-bindsym $mod+Print exec gnome-screenshot -a
+bindsym Print exec maim -s ~/Imagens/screenshots/$(date +%d%m%y%H%M%S).png 
+bindsym $mod+Print exec maim ~/Imagens/screenshots/$(date +%d%m%y%H%M%S).png 
 
 # ranger
 bindsym $mod+g exec alacritty -e ranger
