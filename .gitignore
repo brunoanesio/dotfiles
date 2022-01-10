@@ -1,3 +1,1 @@
-.config/nitrogen/bg-saved.cfg
-.config/polybar/polybar-scripts/openweathermap-simple.sh
-.config/Thunar/accels.scm
+polybar/.config/polybar/polybar-scripts/openweathermap-simple.sh
