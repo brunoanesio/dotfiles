@@ -30,6 +30,9 @@ source $HOME/.aliases
 # Editor
 export EDITOR=nvim
 
+# Path
+export PATH=$HOME/.local/bin:$PATH
+
 # Prompt
 autoload -U promptinit; promptinit
 prompt spaceship
