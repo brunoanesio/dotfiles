@@ -2,11 +2,11 @@ configuration {
 	modi: "window,run,drun";
 	font: "JetBrains Mono 12";
 	show-icons: true; 
-	terminal: "Alacritty";
+	terminal: "Kitty";
 	icon-theme: "Papirus";
 	drun-display-format: "{name}";
-	display-window: "Janelas:";
-	display-drun: "Aplicativos:";
+	display-window: "Janelas";
+	display-drun: "Aplicativos";
 /*	display-calc: ;*/
 /*	display-emoji: ;*/
   timeout {
@@ -18,4 +18,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/onedark.rasi"
