@@ -4,7 +4,7 @@
 	<icon>utilities-terminal</icon>
 	<name>Abrir terminal aqui</name>
 	<unique-id>1641453040353883-1</unique-id>
-	<command>alacritty --working-directory=%f</command>
+	<command>kitty %f</command>
 	<description>Terminal</description>
 	<patterns>*</patterns>
 	<startup-notify/>
