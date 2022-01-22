@@ -1,1 +1,4 @@
 polybar/.config/polybar/polybar-scripts/openweathermap-simple.sh
+nvim/.local/share/nvim/
+.luarc.json
+Thunar/.config/Thunar/accels.scm
