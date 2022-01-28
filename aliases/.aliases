@@ -1,12 +1,15 @@
 # Arch
-alias upgrade='paru -Syu'
+alias upgrade='paru'
 alias info='pacman -Qi '
 alias aur='pacman -Qm'
+alias pacins='sudo pacman -S '
+alias pacrem='sudo pacman -R '
+alias pacsea='pacman -Ss '
 
 # ls
 alias ls='ls --color=auto'
 alias la='ls -a'
-alias ll='ls -la'
+alias ll='ls -lah'
 
 # Git
 alias gs='git status'
