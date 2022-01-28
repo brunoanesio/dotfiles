@@ -155,8 +155,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec ~/.config/rofi/powermenu/powermenu.sh
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec ~/.config/rofi/powermenu/powermenu.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -189,8 +189,8 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 2 
 gaps inner 4 
 gaps outer 4
-smart_gaps on
-smart_borders on
+#smart_gaps on
+#smart_borders on
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #61AFEF #61AFEF #ffffff #E06C75   #61AFEF
@@ -239,10 +239,10 @@ bindsym $mod+y exec rofi -show emoji -modi emoji
 bindsym $mod+Tab exec rofi -show window
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl --player=spotify play-pause
+bindsym XF86AudioPause exec playerctl --player=spotify play-pause
+bindsym XF86AudioNext exec playerctl --player=spotify next
+bindsym XF86AudioPrev exec playerctl --player=spotify previous
 
 # Screenshot
 bindsym Print exec maim -s ~/Imagens/screenshots/$(date +%d%m%y%H%M%S).png 
