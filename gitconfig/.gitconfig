@@ -1,7 +1,7 @@
 [init]
 	defaultBranch = main
 [user]
-	email = brunohanesio@gmail.com
+	email = 
 	name = Bruno Anesio
 [core]
 	autocrlf = input
