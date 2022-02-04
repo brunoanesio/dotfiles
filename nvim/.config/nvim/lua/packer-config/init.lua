@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 -- packer
   use 'wbthomason/packer.nvim'
 
@@ -7,13 +7,13 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'norcalli/nvim-colorizer.lua'
---use { 'goolord/alpha-nvim', config = function () require'alpha'.setup(require'alpha.themes.dashboard'.config) end }
 -- IDE features
   use { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup {} end }
   use 'rcarriga/nvim-notify'
   use 'akinsho/bufferline.nvim'
   use 'windwp/nvim-autopairs'
   use "lukas-reineke/indent-blankline.nvim"
+  use "lewis6991/gitsigns.nvim"
 -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-refactor'
@@ -26,10 +26,12 @@ return require('packer').startup(function()
       'williamboman/nvim-lsp-installer',
       'hrsh7th/nvim-cmp',
       'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
       'saadparwaiz1/cmp_luasnip',
       'L3MON4D3/LuaSnip',
       'onsails/lspkind-nvim',
+      'rafamadriz/friendly-snippets',
       'jose-elias-alvarez/null-ls.nvim'
   }
 end)

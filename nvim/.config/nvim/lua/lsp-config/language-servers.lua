@@ -34,7 +34,9 @@ local function on_attach(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
   buf_set_keymap('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-
+  if client.name == "tsserver" then
+    client.resolved_capabilities.document_formatting = false
+  end
 end
 
 -- Add additional capabilities supported by nvim-cmp
