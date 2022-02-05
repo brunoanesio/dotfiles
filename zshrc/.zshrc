@@ -21,11 +21,15 @@ bindkey -e
 # Enable colors
 autoload -U colors && colors
 
-# Load zsh-syntax-highlighting
+# Load plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases
 source $HOME/.aliases
+
+# Bindings
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
 
 # Prompt
 autoload -U promptinit; promptinit

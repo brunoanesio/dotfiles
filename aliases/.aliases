@@ -13,7 +13,7 @@ alias ll='ls -lah'
 
 # Git
 alias gs='git status'
-alias gc='git commit '
+alias gc='git commit -S -m '
 alias gp='git push'
 alias gpo='git push origin'
 alias gco='git checkout '
@@ -26,7 +26,10 @@ alias reboot='systemctl reboot'
 alias shutdown='shutdown -h now'
 
 # grep
-alias grep='grep --color=auto'
+alias grep='grep -i --color=auto'
 
 # vim
 alias vim='nvim'
+
+# cd
+alias ..='cd ..'
