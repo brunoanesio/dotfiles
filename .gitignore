@@ -1,4 +1,5 @@
 polybar/.config/polybar/polybar-scripts/openweathermap-simple.sh
-nvim/.local/share/nvim/
+nvim/.config/nvim/plugin/*
+nvim/.config/nvim/plugin/packer_compiled.lua
 .luarc.json
 Thunar/.config/Thunar/accels.scm
