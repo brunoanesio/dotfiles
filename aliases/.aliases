@@ -2,8 +2,8 @@
 alias upgrade='paru'
 alias info='pacman -Qi '
 alias aur='pacman -Qm'
-alias pacins='sudo pacman -S '
-alias pacrem='sudo pacman -R '
+alias pacins='doas pacman -S '
+alias pacrem='doas pacman -R '
 alias pacsea='pacman -Ss '
 
 # ls
@@ -33,3 +33,6 @@ alias vim='nvim'
 
 # cd
 alias ..='cd ..'
+
+# doas
+alias sudo='doas'

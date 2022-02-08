@@ -8,6 +8,7 @@ zstyle ':completion:*' menu yes select
 zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
 
 autoload -Uz compinit
+fpath+=~/.zfunc
 compinit
 
 # Lines configured by zsh-newuser-install
@@ -46,6 +47,7 @@ SPACESHIP_PROMPT_ORDER=(
 	venv
 	conda
 	pyenv
+    rust
 	vi_mode
 	jobs
 	exit_code
@@ -53,7 +55,6 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 SPACESHIP_RPROMPT_ORDER=(
-	time
 	exec_time
 )
 
