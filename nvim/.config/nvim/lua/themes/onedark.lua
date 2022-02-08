@@ -13,12 +13,14 @@ require('lualine').setup {
     lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
-  }
+  },
+  extensions = {'nvim-tree'},
 }
 vim.opt.list = false
 require('indent_blankline').setup {
     -- char = '¦',
+    filetype_exclude = {'NvimTree', 'packer', 'lsp-installer'},
     show_end_of_line = true,
-    show_current_context = true,
+    show_current_context = false,
     show_current_context_start = false,
 }

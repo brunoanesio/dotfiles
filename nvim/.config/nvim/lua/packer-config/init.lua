@@ -3,7 +3,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
 -- theme
-  use 'monsonjeremy/onedark.nvim'
+  -- use 'monsonjeremy/onedark.nvim'
+  use 'ful1e5/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'norcalli/nvim-colorizer.lua'
