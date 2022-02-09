@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'norcalli/nvim-colorizer.lua'
 -- IDE features
-  use { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup {} end }
+  use 'kyazdani42/nvim-tree.lua'
   use 'rcarriga/nvim-notify'
   use 'akinsho/bufferline.nvim'
   use 'windwp/nvim-autopairs'
@@ -19,7 +19,8 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-refactor'
 -- Telescope
-  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 -- LSP
   use {
