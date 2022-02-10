@@ -1,0 +1,95 @@
+/*
+ * ROFI Tokyo Night
+ */
+
+
+* {
+  black:      #15161e;
+  red:        #f7768e;
+  green:      #9ece6a;
+  yellow:     #e0af68;
+  blue:       #7aa2f7;
+  mangenta:   #bb9af7;
+  cyan:       #7dcfff;
+  emphasis:   #33467c;
+  text:       #c0caf5;
+  text-alt:   #c0caf5;
+  fg:         #c0caf5;
+  bg:         #1a1b26;
+
+  spacing: 0;
+  background-color: transparent;
+
+  font: "JetBrains Mono Nerd Font 14";
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  fullscreen: false;
+  background-color: #2e3440;
+}
+
+element-icon {
+  size: 30;
+}
+
+inputbar {
+  margin: 5px 0px 5px 5px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @blue;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 5px;
+  lines: 8;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #3f4758;
+}
+
+element selected {
+  background-color: @emphasis;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
+
