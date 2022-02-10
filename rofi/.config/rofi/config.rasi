@@ -18,4 +18,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/onedark.rasi"
+@theme "~/.config/rofi/nord.rasi"

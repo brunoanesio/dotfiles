@@ -1,7 +1,7 @@
 require('packer-config')
 require('settings')
 require('mappings')
-require('themes.onedark')
+require('themes.nord')
 require('bufferline-config')
 require('autopairs-config')
 require('nvim-tree-config')
