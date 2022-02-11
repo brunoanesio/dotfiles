@@ -6,6 +6,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
     formatting.autopep8,
+    diagnostics.flake8,
     formatting.stylua,
     formatting.prettier,
     code_actions.eslint,
