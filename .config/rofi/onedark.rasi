@@ -10,14 +10,14 @@
 
 
 * {
-  black:      #000000;
-  red:        #eb6e67;
-  green:      #95ee8f;
-  yellow:     #f8c456;
-  blue:       #6eaafb;
-  mangenta:   #d886f3;
-  cyan:       #6cdcf7;
-  emphasis:   #222222;
+  black:      #282c34;
+  red:        #e06c75;
+  green:      #98c379;
+  yellow:     #e5c07b;
+  blue:       #61afef;
+  mangenta:   #c678dd;
+  cyan:       #56b6c2;
+  emphasis:   #393f4a;
   text:       #dfdfdf;
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
@@ -31,9 +31,8 @@
 }
 
 window {
-  transparency: "real";
   fullscreen: false;
-  background-color: #282c34dd;
+  background-color: #282c34;
 }
 
 element-icon {
