@@ -44,6 +44,8 @@ SPACESHIP_PROMPT_ORDER=(
 	package
 	node
 	docker
+    php
+    rust
 	venv
 	conda
 	pyenv

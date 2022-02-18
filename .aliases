@@ -11,6 +11,12 @@ alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -lah'
 
+# exa
+alias exa='exa --icons -sname'
+alias ex='exa -a'
+alias exx='exa -la'
+alias exg='exa -la --git'
+
 # Git
 alias gs='git status'
 alias gc='git commit -S -m '
@@ -28,8 +34,8 @@ alias shutdown='shutdown -h now'
 # grep
 alias grep='grep -i --color=auto'
 
-# vim
-alias vim='nvim'
+# nvim
+alias v='nvim'
 
 # cd
 alias ..='cd ..'
