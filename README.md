@@ -1,3 +1,9 @@
-Config files for my i3 setup
+Config files for my qtile and i3 setups
 
-![image](screenshots/print.png)
+qtile
+
+![qtile](screenshots/qtile.png)
+
+i3 (old)
+
+![i3](screenshots/i3.png)
