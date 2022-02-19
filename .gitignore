@@ -3,3 +3,4 @@ nvim/.config/nvim/plugin/*
 nvim/.config/nvim/plugin/packer_compiled.lua
 .luarc.json
 Thunar/.config/Thunar/accels.scm
+**/__pycache__/
