@@ -102,7 +102,7 @@
 
 [urgency_critical]
     background = "#e06c75"
-    foreground = "#abb2bf"
+    foreground = "#282c34"
     frame_color = "#ff0000"
     timeout = 0
     #default_icon = /path/to/icon
