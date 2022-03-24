@@ -51,16 +51,17 @@ keys = [
     Key([mod, "shift"], "e", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # Monad layout keys
-    Key([mod], "i", lazy.layout.grow()),
-    Key([mod], "m", lazy.layout.shrink()),
+    Key([mod], "l", lazy.layout.grow()),
+    Key([mod], "h", lazy.layout.shrink()),
     Key([mod], "n", lazy.layout.normalize()),
-    Key([mod], "o", lazy.layout.maximize()),
+    Key([mod], "m", lazy.layout.maximize()),
     # Floating and fullscreen
-    Key([mod, "shift"], "space", lazy.layout.toggle_floating()),
+    Key([mod, "shift"], "f", lazy.layout.toggle_floating()),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     # Rofi
     Key([mod], "d", lazy.spawn("rofi -modi drun,run -show drun")),
     Key([mod], "y", lazy.spawn("rofi -show emoji -modi emoji")),
+    Key([mod], "c", lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort")),
     # Player controls
     Key([], "XF86AudioPlay", lazy.spawn("playerctl --player=playerctld play-pause")),
     Key([], "XF86AudioPause", lazy.spawn("playerctl --player=playerctld play-pause")),
@@ -174,20 +175,20 @@ screens = [
                 widget.CurrentLayout(
                     foreground=onedark['yellow'],
                 ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
-                widget.TextBox(
-                    text='ﮮ',
-                    foreground=onedark['yellow'],
-                    padding=8
-                ),
-                widget.CheckUpdates(
-                    custom_command='checkupdates',
-                    no_update_string='N/A Updates',
-                    update_interval=60,
-                ),
+                # widget.Sep(
+                #     foreground=onedark['gray'],
+                #     padding=10
+                # ),
+                # widget.TextBox(
+                #     text='ﮮ',
+                #     foreground=onedark['yellow'],
+                #     padding=8
+                # ),
+                # widget.CheckUpdates(
+                #     custom_command='checkupdates',
+                #     no_update_string='N/A Updates',
+                #     update_interval=60,
+                # ),
                 widget.Sep(
                     foreground=onedark['gray'],
                     padding=10
