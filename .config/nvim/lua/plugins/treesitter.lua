@@ -2,7 +2,7 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"python",
 		"lua",
-		"typescript",
+		"javascript",
 	},
 
 	sync_install = false,

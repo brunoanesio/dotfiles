@@ -2,8 +2,7 @@ local lsp_installer = require "nvim-lsp-installer"
 
 local servers = {
     "pyright",
-    "tsserver",
-    "sumneko_lua"
+    "sumneko_lua",
 }
 
 local function on_attach(client, bufnr)
