@@ -1,14 +1,14 @@
 configuration {
 	modi: "window,run,drun";
-	font: "JetBrains Mono 12";
+	font: "Iosevka 12";
 	show-icons: true; 
 	terminal: "Kitty";
 	icon-theme: "Papirus";
 	drun-display-format: "{name}";
 	display-window: "Janelas";
 	display-drun: "Aplicativos";
-/*	display-calc: ;*/
-/*	display-emoji: ;*/
+	display-calc: "Calculadora";
+	display-emoji: "Emojis";
   timeout {
       action: "kb-cancel";
       delay:  0;
