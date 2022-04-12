@@ -1,5 +1,5 @@
 # Arch
-alias upgrade='paru'
+alias upgrade='paru -Syu'
 alias info='pacman -Qi '
 alias aur='pacman -Qm'
 alias pacins='sudo pacman -S '
