@@ -23,8 +23,8 @@ bindkey -e
 autoload -U colors && colors
 
 # Load plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
@@ -39,32 +39,34 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+eval "$(starship init zsh)"
 
-SPACESHIP_PROMPT_ORDER=(
-	user
-	host
-	dir
-	git
-	package
-	node
-	docker
-    php
-    rust
-	venv
-	conda
-	pyenv
-    rust
-	vi_mode
-	jobs
-	exit_code
-	char
-)
-
-SPACESHIP_RPROMPT_ORDER=(
-	exec_time
-)
-
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
+# autoload -U promptinit; promptinit
+# prompt spaceship
+# 
+# SPACESHIP_PROMPT_ORDER=(
+# 	user
+# 	host
+# 	dir
+# 	git
+# 	package
+# 	node
+# 	docker
+#    	php
+#     	rust
+# 	venv
+# 	conda
+# 	pyenv
+#     	rust
+# 	vi_mode
+# 	jobs
+# 	exit_code
+# 	char
+# )
+# 
+# SPACESHIP_RPROMPT_ORDER=(
+# 	exec_time
+# )
+# 
+# SPACESHIP_PROMPT_ADD_NEWLINE=false
+# SPACESHIP_PROMPT_SEPARATE_LINE=false
