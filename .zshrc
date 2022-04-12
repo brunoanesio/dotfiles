@@ -70,3 +70,5 @@ eval "$(starship init zsh)"
 # 
 # SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_PROMPT_SEPARATE_LINE=false
+
+export PATH=$PATH:/home/frost/.spicetify
