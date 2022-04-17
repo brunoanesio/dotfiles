@@ -18,7 +18,7 @@ return require("packer").startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use("lewis6991/gitsigns.nvim")
 	use("numToStr/Comment.nvim")
-    use("windwp/nvim-ts-autotag")
+	use("windwp/nvim-ts-autotag")
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-refactor")
