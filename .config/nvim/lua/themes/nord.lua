@@ -1,6 +1,6 @@
 require("onenord").setup({
-    styles = {
-        comments = "italic",
-        keywords = "italic",
-    },
+	styles = {
+		comments = "italic",
+		keywords = "italic",
+	},
 })
