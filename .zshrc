@@ -41,34 +41,5 @@ bindkey '^[[B' history-substring-search-down
 # Prompt
 eval "$(starship init zsh)"
 
-# autoload -U promptinit; promptinit
-# prompt spaceship
-# 
-# SPACESHIP_PROMPT_ORDER=(
-# 	user
-# 	host
-# 	dir
-# 	git
-# 	package
-# 	node
-# 	docker
-#    	php
-#     	rust
-# 	venv
-# 	conda
-# 	pyenv
-#     	rust
-# 	vi_mode
-# 	jobs
-# 	exit_code
-# 	char
-# )
-# 
-# SPACESHIP_RPROMPT_ORDER=(
-# 	exec_time
-# )
-# 
-# SPACESHIP_PROMPT_ADD_NEWLINE=false
-# SPACESHIP_PROMPT_SEPARATE_LINE=false
-
+# Spicetify path
 export PATH=$PATH:/home/frost/.spicetify
