@@ -1,4 +1,4 @@
-set font "Iosevka 12"
+set font "JetBrains Mono 12"
 map b toggle_statusbar
 map r recolor
 
