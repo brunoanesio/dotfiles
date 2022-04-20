@@ -3,9 +3,11 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+-- custom mappings
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-map("n", "<leader>h", ":nohlsearch<CR>", opts)
+map("n", "<leader>h", ":set hlsearch!<CR>", opts)
 map("n", "<leader>ps", ":PackerSync<CR>", opts)
+map("n", "<leader>tn", ":tabnew<CR>", opts)
 -- bufferline mappings
 map("n", "<A-,>", ":BufferLineCyclePrev<CR>", opts)
 map("n", "<A-.>", ":BufferLineCycleNext<CR>", opts)
@@ -31,5 +33,16 @@ map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
+map("n", "<leader>fd", ":Telescope diagnostics<CR>", opts)
+map("n", "<leader>fs", ":Telescope symbols<CR>", opts)
+map("n", "<leader>nc", ":Telescope neoclip<CR>", opts)
+map("n", "<leader>gf", ":Telescope git_files<CR>", opts)
+map("n", "<leader>gc", ":Telescope git_commits<CR>", opts)
+map("n", "<leader>ch", ":Telescope command_history<CR>", opts)
+map("n", "<leader>ld", ":Telescope lsp_definitions<CR>", opts)
+map("n", "<leader>mf", ":Telescope media_files<CR>", opts)
 -- change splits
-map("n", "<A-a>", "<C-W>w", opts)
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)

@@ -3,10 +3,10 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- theme
-	-- use 'monsonjeremy/onedark.nvim'
 	use("ful1e5/onedark.nvim")
-	use("rmehri01/onenord.nvim")
-	use("folke/tokyonight.nvim")
+	-- use 'monsonjeremy/onedark.nvim'
+	-- use("rmehri01/onenord.nvim")
+	-- use("folke/tokyonight.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use("norcalli/nvim-colorizer.lua")
@@ -26,6 +26,9 @@ return require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+    use("nvim-telescope/telescope-media-files.nvim")
+    use("nvim-telescope/telescope-symbols.nvim")
+    use("AckslD/nvim-neoclip.lua")
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig",
