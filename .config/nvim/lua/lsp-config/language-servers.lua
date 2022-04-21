@@ -33,15 +33,34 @@ local function on_attach(client, bufnr)
 	buf_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 	buf_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 	buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	-- buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	buf_set_keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	-- buf_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 	buf_set_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-	buf_set_keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
 	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
 	end
 end
+
+local enhance_server_opts = {
+	-- Provide settings that should only apply to the "eslint" server
+	["html"] = function(opts)
+		opts.filetypes = {
+			"html",
+			"htmldjango",
+		}
+		opts.init_options = {
+			embeddedLanguages = {
+				css = true,
+				javascript = true,
+			},
+			provideFormatter = true,
+		}
+	end,
+}
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -51,6 +70,11 @@ lsp_installer.on_server_ready(function(server)
 		capabilities = capabilities,
 		on_attach = on_attach,
 	}
+
+	if enhance_server_opts[server.name] then
+		-- Enhance the default opts with the server-specific ones
+		enhance_server_opts[server.name](opts)
+	end
 
 	server:setup(opts)
 end)

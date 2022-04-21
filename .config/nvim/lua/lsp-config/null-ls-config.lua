@@ -15,10 +15,20 @@ local sources = {
 	-- js,ts,etc
 	formatting.prettier,
 	code_actions.eslint,
-    -- bash
-    formatting.shfmt,
+	-- bash
+	formatting.shfmt,
 }
 
 null_ls.setup({
 	sources = sources,
+	on_attach = function(client)
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd([[
+            augroup LspFormatting
+                autocmd! * <buffer>
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+            augroup END
+            ]])
+		end
+	end,
 })
