@@ -1,9 +1,11 @@
 Config files for my qtile and i3 setups
 
-qtile
+<details>
+	<summary>Show screenshots</summary>
 
-![qtile](screenshots/qtile.png)
+	qtile
+	![qtile](screenshots/qtile.png)
 
-i3 (old)
-
-![i3](screenshots/i3.png)
+	i3 (old)
+	![i3](screenshots/i3.png)
+</details>
