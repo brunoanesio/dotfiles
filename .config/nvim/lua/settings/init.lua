@@ -25,5 +25,6 @@ set.termguicolors = true
 set.number = true
 set.relativenumber = true
 set.cursorline = true
+set.mouse = "a"
 
 set.hidden = true
