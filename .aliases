@@ -26,6 +26,7 @@ alias gco='git checkout '
 alias gb='git branch '
 alias gpl='git pull'
 alias gplo='git pull origin'
+alias gr='git revert -S '
 
 # System
 alias reboot='systemctl reboot'

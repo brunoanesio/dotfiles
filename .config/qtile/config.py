@@ -17,17 +17,22 @@ keys = [
     Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(),
+        desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "Left", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "Left", lazy.layout.shuffle_left(),
+        desc="Move window to the left"),
+    Key([mod, "shift"], "Right", lazy.layout.shuffle_right(),
+        desc="Move window to the right"),
     Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
+    Key([mod, "control"], "h", lazy.layout.grow_left(),
+        desc="Grow window to the left"),
+    Key([mod, "control"], "l", lazy.layout.grow_right(),
+        desc="Grow window to the right"),
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod, "shift", "control"], "h", lazy.layout.swap_column_left()),
@@ -63,20 +68,27 @@ keys = [
     Key([mod], "y", lazy.spawn("rofi -show emoji -modi emoji")),
     Key([mod], "c", lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort")),
     # Player controls
-    Key([], "XF86AudioPlay", lazy.spawn("playerctl --player=playerctld play-pause")),
-    Key([], "XF86AudioPause", lazy.spawn("playerctl --player=playerctld play-pause")),
+    Key([], "XF86AudioPlay", lazy.spawn(
+        "playerctl --player=playerctld play-pause")),
+    Key([], "XF86AudioPause", lazy.spawn(
+        "playerctl --player=playerctld play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl --player=playerctld next")),
-    Key([], "XF86AudioPrev", lazy.spawn("playerctl --player=playerctld previous")),
+    Key([], "XF86AudioPrev", lazy.spawn(
+        "playerctl --player=playerctld previous")),
     # Volume keys
-    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%")),
+    Key([], "XF86AudioMute", lazy.spawn(
+        "pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ +2%")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ -2%")),
     # Program shortcuts
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "b", lazy.spawn("firefox")),
     Key([mod], "g", lazy.spawn("kitty ranger")),
 
-    Key([mod], "Print", lazy.spawn("maim -s ~/Imagens/screenshots/$(date +%d%m%y%H%M%S).png")),
+    Key([mod], "Print", lazy.spawn(
+        "maim -s ~/Imagens/screenshots/$(date +%d%m%y%H%M%S).png")),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -114,7 +126,8 @@ def layout_theme():
 
 layouts = [
     layout.MonadTall(**layout_theme()),
-    layout.Columns(border_focus=onedark["blue"], border_normal=onedark['black'], border_width=2),
+    layout.Columns(
+        border_focus=onedark["blue"], border_normal=onedark['black'], border_width=2),
     layout.Max(),
     # layout.Tile(**layout_theme()),
     # layout.Zoomy(**layout_theme()),
