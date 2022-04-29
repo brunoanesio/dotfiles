@@ -4,7 +4,7 @@ local servers = {
 	"sumneko_lua",
 	"cssls",
 	"eslint",
-	"pylsp",
+	"pyright",
 	"html",
 }
 

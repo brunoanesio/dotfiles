@@ -6,7 +6,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
 	-- python and django
-	formatting.autopep8,
+	formatting.black,
 	diagnostics.flake8,
 	formatting.djlint,
 	diagnostics.djlint,
