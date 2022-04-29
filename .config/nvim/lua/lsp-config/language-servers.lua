@@ -1,8 +1,11 @@
 local lsp_installer = require("nvim-lsp-installer")
 
 local servers = {
-	"pyright",
 	"sumneko_lua",
+	"cssls",
+	"eslint",
+	"pylsp",
+	"html",
 }
 
 local function on_attach(client, bufnr)
@@ -46,7 +49,6 @@ local function on_attach(client, bufnr)
 end
 
 local enhance_server_opts = {
-	-- Provide settings that should only apply to the "eslint" server
 	["html"] = function(opts)
 		opts.filetypes = {
 			"html",
@@ -57,7 +59,13 @@ local enhance_server_opts = {
 				css = true,
 				javascript = true,
 			},
-			provideFormatter = true,
+			provideFormatter = false,
+		}
+	end,
+	["pylsp"] = function(opts)
+		opts.plugins = {
+			flake8 = { enabled = true },
+			pylint = { enabled = true },
 		}
 	end,
 }
