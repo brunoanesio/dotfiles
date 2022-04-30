@@ -40,7 +40,7 @@ map("n", "<leader>gf", ":Telescope git_files<CR>", opts)
 map("n", "<leader>gc", ":Telescope git_commits<CR>", opts)
 map("n", "<leader>ch", ":Telescope command_history<CR>", opts)
 map("n", "<leader>ld", ":Telescope lsp_definitions<CR>", opts)
--- map("n", "<leader>mf", ":Telescope media_files<CR>", opts)
+map("n", "<leader>mf", ":Telescope media_files<CR>", opts)
 -- change splits
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
