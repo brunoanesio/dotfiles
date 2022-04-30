@@ -3,6 +3,10 @@ require("nvim-treesitter.configs").setup({
 		"python",
 		"lua",
 		"javascript",
+		"html",
+		"css",
+		"bash",
+		"markdown",
 	},
 
 	sync_install = false,

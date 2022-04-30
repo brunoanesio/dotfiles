@@ -6,6 +6,7 @@ local servers = {
 	"eslint",
 	"pyright",
 	"html",
+	"bashls",
 }
 
 local function on_attach(client, bufnr)
