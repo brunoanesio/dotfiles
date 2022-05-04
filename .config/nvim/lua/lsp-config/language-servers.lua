@@ -11,7 +11,18 @@ require("nvim-lsp-installer").setup({
 	},
 })
 
+-- LSP UI config
 vim.o.updatetime = 250
+vim.diagnostic.config({
+	update_in_insert = true,
+})
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = "rounded",
+})
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+	border = "rounded",
+})
+
 local lspconfig = require("lspconfig")
 local function on_attach(_, bufnr)
 	vim.api.nvim_create_autocmd("CursorHold", {
@@ -105,8 +116,3 @@ lspconfig.bashls.setup({
 -- 		},
 -- 	},
 -- })
-
--- LSP UI config
-vim.diagnostic.config({
-	update_in_insert = true,
-})
