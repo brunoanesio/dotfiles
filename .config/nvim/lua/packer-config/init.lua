@@ -1,8 +1,8 @@
 return require("packer").startup(function(use)
-	-- packer
+	-- Packer
 	use("wbthomason/packer.nvim")
 
-	-- theme
+	-- Theme
 	use("ful1e5/onedark.nvim")
 	-- use 'monsonjeremy/onedark.nvim'
 	-- use("rmehri01/onenord.nvim")
@@ -19,9 +19,11 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
+	use({ "akinsho/toggleterm.nvim" })
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-refactor")
+	use("p00f/nvim-ts-rainbow")
 	-- Telescope
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
