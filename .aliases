@@ -32,11 +32,15 @@ alias gr='git revert -S '
 alias reboot='systemctl reboot'
 alias shutdown='shutdown -h now'
 
-# grep
+# grep, rg
 alias grep='grep -i --color=auto'
+alias rg='rg -i'
 
 # nvim
 alias v='nvim'
+
+# emacs
+alias emacs='emacsclient -c -a 'emacs''
 
 # cd
 alias ..='cd ..'
