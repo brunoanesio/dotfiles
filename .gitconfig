@@ -7,3 +7,5 @@
 	autocrlf = input
 [credential]
 	helper = cache
+[commit]
+	gpgsign = true
