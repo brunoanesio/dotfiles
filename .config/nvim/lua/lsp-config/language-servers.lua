@@ -1,4 +1,4 @@
-local servers = { "pyright", "sumneko_lua", "html", "eslint", "cssls" }
+local servers = { "pyright", "sumneko_lua", "html", "eslint", "cssls", "bashls" }
 require("nvim-lsp-installer").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
