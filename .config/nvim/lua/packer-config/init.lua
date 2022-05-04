@@ -20,6 +20,7 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
 	use({ "akinsho/toggleterm.nvim" })
+	use({ "goolord/alpha-nvim" })
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-refactor")
@@ -29,8 +30,10 @@ return require("packer").startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use("nvim-telescope/telescope-media-files.nvim")
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	use("nvim-telescope/telescope-symbols.nvim")
 	use("AckslD/nvim-neoclip.lua")
+	use("nvim-telescope/telescope-project.nvim")
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig",
