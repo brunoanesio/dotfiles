@@ -1,6 +1,8 @@
 return require("packer").startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
+	use("lewis6991/impatient.nvim")
+	use("folke/which-key.nvim")
 
 	-- Theme
 	use("ful1e5/onedark.nvim")
