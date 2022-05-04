@@ -1,7 +1,7 @@
 require("gitsigns").setup({
 	current_line_blame = true,
 	current_line_blame_opts = {
-		delay = 500,
+		delay = 250,
 	},
 	on_attach = function(bufnr)
 		local gs = package.loaded.gitsigns
