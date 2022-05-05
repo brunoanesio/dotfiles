@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
 	use("famiu/bufdelete.nvim")
+	use("folke/todo-comments.nvim")
 
 	-- Theme
 	use("ful1e5/onedark.nvim")
