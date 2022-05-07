@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+[user]
+	email = 69819132+brunoanesio@users.noreply.github.com
+	name = Bruno Anesio
+[core]
+	autocrlf = input
+[credential]
+	helper = cache
+[commit]
+	gpgsign = true

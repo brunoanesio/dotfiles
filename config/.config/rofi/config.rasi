@@ -1,0 +1,21 @@
+configuration {
+	modi: "window,run,drun";
+	font: "Iosevka 12";
+	show-icons: true; 
+	terminal: "Kitty";
+	icon-theme: "Papirus";
+	drun-display-format: "{name}";
+	display-window: "Janelas";
+	display-drun: "Aplicativos";
+	display-calc: "Calculadora";
+	display-emoji: "Emojis";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@theme "~/.config/rofi/onedark.rasi"

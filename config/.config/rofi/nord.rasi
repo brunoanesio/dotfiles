@@ -1,0 +1,95 @@
+/*
+ * ROFI One Nord
+ */
+
+
+* {
+  black:      #3b4252;
+  red:        #e06c75;
+  green:      #9ec183;
+  yellow:     #ebcb8b;
+  blue:       #81a1c1;
+  mangenta:   #b988b0;
+  cyan:       #88c0d0;
+  emphasis:   #3b4252;
+  text:       #e5e9f0;
+  text-alt:   #3f4758;
+  fg:         #e5e9f0;
+  bg:         #2e3440;
+
+  spacing: 0;
+  background-color: transparent;
+
+  font: "JetBrains Mono Nerd Font 14";
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  fullscreen: false;
+  background-color: #2e3440;
+}
+
+element-icon {
+  size: 30;
+}
+
+inputbar {
+  margin: 5px 0px 5px 5px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @blue;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 5px;
+  lines: 8;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #3f4758;
+}
+
+element selected {
+  background-color: @emphasis;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
+
