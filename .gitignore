@@ -5,3 +5,4 @@ nvim/.config/nvim/plugin/packer_compiled.lua
 Thunar/.config/Thunar/accels.scm
 **/__pycache__/
 .config/nvim/plugin/packer_compiled.lua
+config/.config/ranger/plugins/ranger_devicons/
