@@ -1,4 +1,4 @@
-local servers = { "pylsp", "sumneko_lua", "html", "eslint", "cssls", "bashls" }
+local servers = { "pylsp", "sumneko_lua", "html", "eslint", "cssls", "bashls", "emmet_ls" }
 require("nvim-lsp-installer").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
@@ -104,6 +104,11 @@ lspconfig.html.setup({
 lspconfig.bashls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+})
+lspconfig.emmet_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
 })
 require("lspconfig").pylsp.setup({
 	on_attach = on_attach,
