@@ -53,5 +53,6 @@ return require("packer").startup(function(use)
 		"onsails/lspkind-nvim",
 		"rafamadriz/friendly-snippets",
 		"jose-elias-alvarez/null-ls.nvim",
+		"jose-elias-alvarez/typescript.nvim",
 	})
 end)

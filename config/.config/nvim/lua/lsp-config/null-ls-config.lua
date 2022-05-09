@@ -8,7 +8,7 @@ local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
 		filter = function(clients)
 			return vim.tbl_filter(function(client)
-				return client.name ~= "sumneko_lua"
+				return client.name ~= { "sumneko_lua", "tsserver" }
 			end, clients)
 		end,
 		bufnr = bufnr,
@@ -16,6 +16,18 @@ local lsp_formatting = function(bufnr)
 end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local on_attach = function(client, bufnr)
+	if client.supports_method("textDocument/formatting") then
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			callback = function()
+				lsp_formatting(bufnr)
+			end,
+		})
+	end
+end
 
 require("null-ls").setup({
 	sources = {
@@ -28,20 +40,10 @@ require("null-ls").setup({
 		formatting.stylua,
 		-- js,ts,etc
 		formatting.prettier,
+		diagnostics.eslint,
 		code_actions.eslint,
 		-- bash
 		formatting.shfmt,
 	},
-	on_attach = function(client, bufnr)
-		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					lsp_formatting(bufnr)
-				end,
-			})
-		end
-	end,
+	on_attach = on_attach,
 })
