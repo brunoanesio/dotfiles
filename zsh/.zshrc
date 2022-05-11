@@ -43,3 +43,5 @@ eval "$(starship init zsh)"
 
 # Spicetify path
 export PATH=$PATH:/home/frost/.spicetify
+
+# precmd () {print -Pn "\e]0;%~\a"}
