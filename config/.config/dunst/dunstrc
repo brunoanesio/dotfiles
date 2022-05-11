@@ -33,7 +33,7 @@
 
     ### Text ###
 
-    font = Iosevka 10
+    font = Iosevka 12
 
     line_height = 0
     markup = full
@@ -71,7 +71,7 @@
 
     class = Dunst
 
-    corner_radius = 0
+    corner_radius = 4
 
     ignore_dbusclose = false
 
