@@ -3,13 +3,13 @@
 _comp_options+=(globdots)
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
-zstyle :compinstall filename '/home/frost/.zshrc'
+zstyle :compinstall filename '/home/frost/.config/zsh/.zshrc'
 zstyle ':completion:*' menu yes select
 zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
 
 autoload -Uz compinit
-fpath+=~/.zfunc
 compinit
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
@@ -30,7 +30,7 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
 
 # Aliases
-source $HOME/.aliases
+source $HOME/.config/zsh/.aliases
 
 # Bindings
 bindkey '^[[1;5D' backward-word
@@ -45,3 +45,19 @@ eval "$(starship init zsh)"
 export PATH=$PATH:/home/frost/.spicetify
 
 # precmd () {print -Pn "\e]0;%~\a"}
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/frost/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/frost/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/frost/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/frost/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
