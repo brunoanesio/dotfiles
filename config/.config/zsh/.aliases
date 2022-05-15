@@ -44,3 +44,6 @@ alias emacs='emacsclient -c -a 'emacs''
 
 # cd
 alias ..='cd ..'
+
+# wget
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
