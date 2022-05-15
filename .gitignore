@@ -8,3 +8,4 @@ Thunar/.config/Thunar/accels.scm
 config/.config/ranger/plugins/ranger_devicons/
 
 config/.config/nvim/plugin
+config/.config/zsh/.zcompdump
