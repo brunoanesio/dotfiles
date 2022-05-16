@@ -13,6 +13,7 @@ local function lsp_server()
 	end
 	return msg
 end
+
 require("lualine").setup({
 	options = {
 		component_separators = { left = "", right = "" },
