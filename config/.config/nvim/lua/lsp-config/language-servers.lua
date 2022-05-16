@@ -80,8 +80,8 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Enable the following language servers
-for _, servers in ipairs(servers) do
-	lspconfig[servers].setup({
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
 	})
