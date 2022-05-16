@@ -27,6 +27,6 @@ set.relativenumber = true
 set.cursorline = true
 set.mouse = "a"
 set.timeoutlen = 500
-set.laststatus = 3
+-- set.laststatus = 3
 
 set.hidden = true

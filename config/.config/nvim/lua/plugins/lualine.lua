@@ -21,6 +21,7 @@ require("lualine").setup({
 		theme = "onedark-nvim",
 		disabled_filetypes = { "alpha" },
 		always_divide_middle = true,
+		globalstatus = true,
 	},
 	sections = {
 		lualine_a = { "mode" },
