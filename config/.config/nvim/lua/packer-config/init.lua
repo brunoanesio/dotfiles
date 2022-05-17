@@ -7,6 +7,8 @@ return require("packer").startup(function(use)
 	use("famiu/bufdelete.nvim")
 	use("folke/todo-comments.nvim")
 	use("ggandor/lightspeed.nvim")
+	use("folke/zen-mode.nvim")
+	use("folke/twilight.nvim")
 
 	-- Theme
 	use("ful1e5/onedark.nvim")

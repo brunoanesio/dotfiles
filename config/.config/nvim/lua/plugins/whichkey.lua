@@ -87,6 +87,7 @@ local mappings = {
 	["h"] = { "<cmd>set hlsearch!<CR>", "Toggle Highlight" },
 	["r"] = { "<cmd>set relativenumber!<CR>", "Toggle Relative Number" },
 	["x"] = { "<cmd>!xdg-open %<CR>", "Open file with XDG-Open" },
+	["z"] = { "<cmd>ZenMode<CR>", "Toggle ZenMode" },
 
 	p = {
 		name = "Packer",
