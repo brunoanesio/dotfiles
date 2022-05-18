@@ -120,6 +120,9 @@ lspconfig.pylsp.setup({
 					enabled = true,
 					maxLineLength = 95,
 				},
+				-- rope_completion = {
+				-- 	enabled = true,
+				-- },
 			},
 		},
 	},
