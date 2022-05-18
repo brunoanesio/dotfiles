@@ -3,7 +3,7 @@
 _comp_options+=(globdots)
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
-zstyle :compinstall filename '/home/frost/.config/zsh/.zshrc'
+zstyle :compinstall filename '$HOME/.config/zsh/.zshrc'
 zstyle ':completion:*' menu yes select
 zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
 
@@ -12,7 +12,7 @@ compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh_history
+HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt notify
