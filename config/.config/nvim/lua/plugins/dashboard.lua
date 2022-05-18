@@ -23,4 +23,14 @@ dashboard.section.buttons.val = {
 }
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
+local function footer()
+	local datetime = os.date(" %d-%m-%Y")
+	local version = vim.version()
+	local nvim_version_info = "   Neovim v" .. version.major .. "." .. version.minor .. "." .. version.patch
+
+	return datetime .. nvim_version_info
+end
+
+dashboard.section.footer.val = footer()
+dashboard.section.footer.opts.hl = "AlphaFooter"
 alpha.setup(dashboard.opts)
