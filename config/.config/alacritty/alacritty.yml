@@ -34,6 +34,9 @@ window:
   # Background opacity
   opacity: 0.85
 
+  # Startup Mode (changes require restart)
+  startup_mode: Maximized
+
 scrolling:
   history: 10000
   multiplier: 3
