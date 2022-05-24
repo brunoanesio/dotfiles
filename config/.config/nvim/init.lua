@@ -1,6 +1,7 @@
 require("packer-config")
 require("settings")
 require("mappings")
+require("autocommands")
 require("themes.onedark")
 require("lsp-config.language-servers")
 require("lsp-config.nvim-cmp")
