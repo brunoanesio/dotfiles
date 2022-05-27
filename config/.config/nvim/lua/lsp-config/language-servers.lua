@@ -127,10 +127,16 @@ lspconfig.pylsp.setup({
 		},
 	},
 })
-require("typescript").setup({
-	disable_formatting = true,
-	server = {
-		on_attach = on_attach,
-		capabilities = capabilities,
-	},
-})
+-- lspconfig.tsserver.setup({
+--     on_attach = on_attach,
+--     capabilities = capabilities
+-- })
+-- FIX: client.resolved_capabilites
+-- require("typescript").setup({
+-- 	disable_formatting = true,
+-- 	server = {
+-- 		on_attach = on_attach,
+-- 		capabilities = capabilities,
+-- 	},
+-- })
+require("typescript").setup({})
