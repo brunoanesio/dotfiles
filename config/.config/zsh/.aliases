@@ -27,6 +27,8 @@ alias gb='git branch '
 alias gpl='git pull'
 alias gplo='git pull origin'
 alias gr='git revert -S '
+alias gf='git fetch'
+alias gfp='git fetch && git pull'
 
 # System
 alias reboot='systemctl reboot'
