@@ -101,14 +101,10 @@ lspconfig.html.setup({
 		provideFormatter = false,
 	},
 })
-lspconfig.bashls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
 lspconfig.emmet_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
+	filetypes = { "html", "htmldjango", "css", "typescriptreact", "javascriptreact" },
 })
 lspconfig.pylsp.setup({
 	on_attach = on_attach,
@@ -117,7 +113,7 @@ lspconfig.pylsp.setup({
 		pylsp = {
 			plugins = {
 				flake8 = {
-					enabled = true,
+					enabled = false,
 					maxLineLength = 95,
 				},
 				-- rope_completion = {
@@ -127,16 +123,11 @@ lspconfig.pylsp.setup({
 		},
 	},
 })
--- lspconfig.tsserver.setup({
---     on_attach = on_attach,
---     capabilities = capabilities
--- })
--- FIX: client.resolved_capabilites
--- require("typescript").setup({
--- 	disable_formatting = true,
--- 	server = {
--- 		on_attach = on_attach,
--- 		capabilities = capabilities,
--- 	},
--- })
-require("typescript").setup({})
+require("typescript").setup({
+	disable_formatting = true,
+	server = {
+		on_attach = on_attach,
+		capabilities = capabilities,
+	},
+})
+-- require("typescript").setup({})
