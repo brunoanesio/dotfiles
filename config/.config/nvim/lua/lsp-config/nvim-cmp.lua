@@ -17,9 +17,6 @@ local check_backspace = function()
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
-cmp_autopairs.lisp[#cmp_autopairs.lisp + 1] = "racket"
-
 --   פּ ﯟ   some other good icons
 local kind_icons = {
 	Text = "",
