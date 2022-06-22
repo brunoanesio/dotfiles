@@ -9,10 +9,10 @@ return require("packer").startup(function(use)
 	use("ggandor/lightspeed.nvim")
 	use("folke/zen-mode.nvim")
 	use("folke/twilight.nvim")
+	use("stevearc/dressing.nvim")
 
 	-- Theme
 	use("ful1e5/onedark.nvim")
-	-- use 'monsonjeremy/onedark.nvim'
 	-- use("rmehri01/onenord.nvim")
 	-- use("folke/tokyonight.nvim")
 	use("kyazdani42/nvim-web-devicons")
@@ -46,16 +46,19 @@ return require("packer").startup(function(use)
 	use({
 		"neovim/nvim-lspconfig",
 		"williamboman/nvim-lsp-installer",
+		"jose-elias-alvarez/typescript.nvim",
+		-- CMP
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-emoji",
 		"saadparwaiz1/cmp_luasnip",
+		-- Snippets
 		"L3MON4D3/LuaSnip",
 		"onsails/lspkind-nvim",
 		"rafamadriz/friendly-snippets",
+		-- Null-ls
 		"jose-elias-alvarez/null-ls.nvim",
-		"jose-elias-alvarez/typescript.nvim",
 	})
 end)
