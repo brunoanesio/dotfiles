@@ -3,6 +3,7 @@ require("nvim-lsp-installer").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
 	ui = {
+		border = "rounded",
 		icons = {
 			server_installed = "✓",
 			server_pending = "➜",
