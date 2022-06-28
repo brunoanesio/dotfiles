@@ -131,3 +131,4 @@ cmp.setup({
 		native_menu = false,
 	},
 })
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
