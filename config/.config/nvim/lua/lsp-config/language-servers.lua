@@ -1,6 +1,7 @@
-local servers = { "pylsp", "sumneko_lua", "html", "tsserver", "cssls", "bashls", "emmet_ls" }
-require("nvim-lsp-installer").setup({
-	ensure_installed = servers,
+-- LSP-Installer config
+local lsp_installer = require("nvim-lsp-installer")
+lsp_installer.setup({
+	ensure_installed = { "pylsp", "sumneko_lua", "html", "tsserver", "cssls", "bashls", "emmet_ls" },
 	automatic_installation = true,
 	ui = {
 		border = "rounded",
@@ -24,6 +25,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 	border = "rounded",
 })
 
+-- LSP config and on_attach function
 local lspconfig = require("lspconfig")
 local function on_attach(_, bufnr)
 	vim.api.nvim_create_autocmd("CursorHold", {
@@ -80,12 +82,13 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Enable the following language servers
-for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+-- Automatic install
+lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+for _, server in ipairs(lsp_installer.get_installed_servers()) do
+	lspconfig[server.name].setup({})
 end
 
 -- LSP languages config
@@ -131,4 +134,3 @@ require("typescript").setup({
 		capabilities = capabilities,
 	},
 })
--- require("typescript").setup({})
