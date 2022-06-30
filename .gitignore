@@ -9,3 +9,4 @@ config/.config/ranger/plugins/ranger_devicons/
 
 config/.config/nvim/plugin
 config/.config/zsh/.zcompdump
+config/.config/kitty/kitty.conf.bak
