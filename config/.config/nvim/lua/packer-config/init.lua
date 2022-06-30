@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
 
 	-- Theme
 	use("ful1e5/onedark.nvim")
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
 	-- use("rmehri01/onenord.nvim")
 	-- use("folke/tokyonight.nvim")
 	use("kyazdani42/nvim-web-devicons")

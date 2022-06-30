@@ -39,6 +39,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	rainbow = {
 		enable = true,
+		-- One Dark colors
 		colors = {
 			"#e06c75",
 			"#98c379",
