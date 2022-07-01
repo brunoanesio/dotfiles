@@ -19,7 +19,12 @@ catppuccin.setup({
 		which_key = true,
 		lightspeed = true,
 		nvimtree = {
-			enabled = true,
+			enabled = false,
+			show_root = false,
+			transparent_panel = false,
+		},
+		neotree = {
+			enabled = false,
 			show_root = false,
 			transparent_panel = false,
 		},
