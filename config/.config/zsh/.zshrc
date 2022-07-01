@@ -8,6 +8,7 @@ zstyle ':completion:*' menu yes select
 zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
 
 autoload -Uz compinit
+fpath+=$XDG_CONFIG_HOME/zsh/zfunc
 compinit
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
