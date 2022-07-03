@@ -1,32 +1,36 @@
-local set = vim.opt
+local options = {
+	syntax = "on",
+	-- cmdheight = 0,
+	showmode = false,
+	expandtab = true,
+	shiftwidth = 4,
+	tabstop = 4,
+	hlsearch = true,
+	incsearch = true,
+	ignorecase = true,
+	smartcase = true,
+	smarttab = true,
+	smartindent = true,
+	splitbelow = true,
+	splitright = true,
+	wrap = true,
+	scrolloff = 5,
+	fileencoding = "utf-8",
+	termguicolors = true,
+	number = true,
+	relativenumber = true,
+	cursorline = true,
+	mouse = "a",
+	timeoutlen = 500,
+	hidden = true,
+	updatetime = 250,
+	clipboard = "unnamedplus",
+	completeopt = { "menuone", "noselect" },
+	guifont = "JetBrainsMono Nerd Font:h16",
+}
 
 vim.notify = require("notify")
 
-set.syntax = "on"
-set.showmode = false
-
-set.expandtab = true
-set.smarttab = true
-set.shiftwidth = 4
-set.tabstop = 4
-
-set.hlsearch = true
-set.incsearch = true
-set.ignorecase = true
-set.smartcase = true
-
-set.splitbelow = true
-set.splitright = true
-set.wrap = true
-set.scrolloff = 5
-set.fileencoding = "utf-8"
-set.termguicolors = true
-
-set.number = true
-set.relativenumber = true
-set.cursorline = true
-set.mouse = "a"
-set.timeoutlen = 500
--- set.laststatus = 3
-
-set.hidden = true
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end
