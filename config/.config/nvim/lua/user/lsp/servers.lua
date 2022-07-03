@@ -14,7 +14,6 @@ lsp_installer.setup({
 })
 
 -- LSP UI config
-vim.o.updatetime = 250
 vim.diagnostic.config({
 	update_in_insert = true,
 })
