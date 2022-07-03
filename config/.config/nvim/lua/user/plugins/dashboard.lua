@@ -24,11 +24,12 @@ dashboard.section.buttons.val = {
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 local function footer()
-	local datetime = os.date(" %d-%m-%Y")
+	local datetime = os.date(" %d-%m-%Y ")
 	local version = vim.version()
+	local plugins_count = vim.fn.len(vim.fn.globpath("~/.local/share/nvim/site/pack/packer/start", "*", 0, 1))
 	local nvim_version_info = "   Neovim v" .. version.major .. "." .. version.minor .. "." .. version.patch
 
-	return datetime .. nvim_version_info
+	return datetime .. "  " .. plugins_count .. " plugins" .. nvim_version_info
 end
 
 dashboard.section.footer.val = footer()

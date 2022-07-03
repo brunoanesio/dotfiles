@@ -147,6 +147,7 @@ local mappings = {
 	},
 	f = {
 		name = "Telescope",
+		s = { "<cmd>Telescope symbols<cr>", "Symbols" },
 		f = { "<cmd>Telescope find_files<cr>", "Find Files" },
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		C = { "<cmd>Telescope commands<cr>", "Commands History" },
