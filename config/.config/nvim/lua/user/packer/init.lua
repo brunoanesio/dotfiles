@@ -1,24 +1,24 @@
 return require("packer").startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
+	-- Misc
+	use("kyazdani42/nvim-web-devicons")
+	use("folke/todo-comments.nvim")
+	use("stevearc/dressing.nvim")
+	use("nvim-lualine/lualine.nvim")
 	-- QoL
 	use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
 	use("famiu/bufdelete.nvim")
-	use("folke/todo-comments.nvim")
 	use("ggandor/lightspeed.nvim")
 	use("folke/zen-mode.nvim")
 	use("folke/twilight.nvim")
-	use("stevearc/dressing.nvim")
+	use("RRethy/vim-illuminate")
+	use("norcalli/nvim-colorizer.lua")
 
-	-- Theme
+	-- Colorschemes
 	use("ful1e5/onedark.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	-- use("rmehri01/onenord.nvim")
-	-- use("folke/tokyonight.nvim")
-	use("kyazdani42/nvim-web-devicons")
-	use("nvim-lualine/lualine.nvim")
-	use("norcalli/nvim-colorizer.lua")
 	-- IDE features
 	-- use({ "nvim-neo-tree/neo-tree.nvim", requires = { "MunifTanjim/nui.nvim" } })
 	use("kyazdani42/nvim-tree.lua")
