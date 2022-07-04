@@ -4,7 +4,7 @@ require("nvim-tree").setup({
 	open_on_tab = false,
 	sync_root_with_cwd = true,
 	view = {
-		width = 36,
+		width = 40,
 	},
 	renderer = {
 		highlight_git = true,
