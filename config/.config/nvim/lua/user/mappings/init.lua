@@ -1,7 +1,9 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- custom mappings
 map("n", "<leader>nt", ":tabnew<CR>", opts)
@@ -25,8 +27,18 @@ map("n", "<A-c>", ":BufferLinePickClose<CR>", opts)
 map("n", "<C-p>", ":BufferLinePick<CR>", opts)
 -- telescope mappings
 map("n", "<leader>bm", ":Telescope marks<CR>", opts)
--- change splits
+-- Window Navigation
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
+-- Window resize
+map("n", "<C-Up>", ":resize -2<CR>", opts)
+map("n", "<C-Down>", ":resize +2<CR>", opts)
+map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- jk fast enter
+map("i", "jk", "<ESC>", opts)
+-- Stay in visual mode
+map("v", "<", "<gv", opts)
+map("v", ">", ">gv", opts)
