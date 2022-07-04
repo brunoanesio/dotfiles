@@ -25,8 +25,9 @@ local options = {
 	hidden = true,
 	updatetime = 250,
 	clipboard = "unnamedplus",
-	completeopt = { "menuone", "noselect" },
+	completeopt = { "menu", "menuone", "noselect" },
 	guifont = "JetBrainsMono Nerd Font:h16",
+	laststatus = 3,
 }
 
 vim.notify = require("notify")
