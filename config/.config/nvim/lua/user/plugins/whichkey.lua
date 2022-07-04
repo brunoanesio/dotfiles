@@ -159,7 +159,8 @@ local mappings = {
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		M = { "<cmd>Telescope media_files<cr>", "Media Files" },
-		p = { "<cmd>Telescope project<cr>", "Projects" },
+		F = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer Find" },
+		P = { "<cmd>Telescope project<cr>", "Projects" },
 		-- C = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 	},
 
