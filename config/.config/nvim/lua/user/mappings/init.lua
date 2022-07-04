@@ -22,7 +22,7 @@ map("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", opts)
 map("n", "<A-q>", ":BufferLineCloseLeft<CR>", opts)
 map("n", "<A-e>", ":BufferLineCloseRight<CR>", opts)
 map("n", "<A-c>", ":BufferLinePickClose<CR>", opts)
-map("n", "<A-p>", ":BufferLinePick<CR>", opts)
+map("n", "<A-x>", ":BufferLinePick<CR>", opts)
 -- telescope mappings
 map("n", "<leader>bm", ":Telescope marks<CR>", opts)
 -- Window Navigation
