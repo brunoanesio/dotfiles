@@ -7,11 +7,9 @@ vim.g.maplocalleader = " "
 
 -- custom mappings
 map("n", "<leader>nt", ":tabnew<CR>", opts)
--- bufferline mappings
-map("n", "<A-,>", ":BufferLineCyclePrev<CR>", opts)
-map("n", "<A-.>", ":BufferLineCycleNext<CR>", opts)
-map("n", "<A-<>", ":BufferLineMovePrev<CR>", opts)
-map("n", "<A->>", ":BufferLineMoveNext<CR>", opts)
+-- buffer mappings
+map("n", "<S-l>", ":bnext<CR>", opts)
+map("n", "<S-h>", ":bprevious<CR>", opts)
 map("n", "<A-1>", ":BufferLineGoToBuffer 1<CR>", opts)
 map("n", "<A-2>", ":BufferLineGoToBuffer 2<CR>", opts)
 map("n", "<A-3>", ":BufferLineGoToBuffer 3<CR>", opts)
@@ -24,7 +22,7 @@ map("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", opts)
 map("n", "<A-q>", ":BufferLineCloseLeft<CR>", opts)
 map("n", "<A-e>", ":BufferLineCloseRight<CR>", opts)
 map("n", "<A-c>", ":BufferLinePickClose<CR>", opts)
-map("n", "<C-p>", ":BufferLinePick<CR>", opts)
+map("n", "<A-p>", ":BufferLinePick<CR>", opts)
 -- telescope mappings
 map("n", "<leader>bm", ":Telescope marks<CR>", opts)
 -- Window Navigation
