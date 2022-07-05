@@ -40,3 +40,6 @@ map("i", "jk", "<ESC>", opts)
 -- Stay in visual mode
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
+-- Illuminate
+map("n", "<a-n>", '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>', opts)
+map("n", "<a-p>", '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>', opts)

@@ -26,13 +26,6 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 
 -- LSP config and on_attach function
 local lspconfig = require("lspconfig")
-local function lsp_highlight(client)
-	local status_ok, illuminate = pcall(require("illuminate"))
-	if not status_ok then
-		return
-	end
-	illuminate.on_attach(client)
-end
 local function on_attach(client, bufnr)
 	vim.api.nvim_create_autocmd("CursorHold", {
 		buffer = bufnr,
@@ -48,7 +41,6 @@ local function on_attach(client, bufnr)
 			vim.diagnostic.open_float(nil, opts)
 		end,
 	})
-	lsp_highlight(client)
 	-- Set up buffer-local keymaps (vim.api.nvim_buf_set_keymap()), etc.
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -82,6 +74,9 @@ local function on_attach(client, bufnr)
 	buf_set_keymap("n", "dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "dn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 	-- buf_set_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+
+	-- Illuminate
+	require("illuminate").on_attach(client)
 end
 
 -- nvim-cmp supports additional completion capabilities
