@@ -44,23 +44,6 @@ lspconfig.emmet_ls.setup({
 	capabilities = require("user.lsp.handlers").capabilities,
 	filetypes = { "html", "htmldjango", "css", "typescriptreact", "javascriptreact" },
 })
--- lspconfig.pylsp.setup({
--- 	on_attach = require("user.lsp.handlers").on_attach,
--- 	capabilities = require("user.lsp.handlers").capabilities,
--- 	settings = {
--- 		pylsp = {
--- 			plugins = {
--- 				flake8 = {
--- 					enabled = false,
--- 					maxLineLength = 95,
--- 				},
--- 				rope_completion = {
--- 					enabled = true,
--- 				},
--- 			},
--- 		},
--- 	},
--- })
 lspconfig.sumneko_lua.setup({
 	on_attach = require("user.lsp.handlers").on_attach,
 	capabilities = require("user.lsp.handlers").capabilities,
