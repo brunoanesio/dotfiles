@@ -9,12 +9,13 @@ return require("packer").startup(function(use)
 	-- QoL
 	use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
-	use("famiu/bufdelete.nvim")
+	use("famiu/bufdelete.nvim") -- Only used in which-key
 	use("ggandor/lightspeed.nvim")
 	use("folke/zen-mode.nvim")
 	use("folke/twilight.nvim")
 	use("RRethy/vim-illuminate")
 	use("norcalli/nvim-colorizer.lua")
+	use("kylechui/nvim-surround")
 
 	-- Colorschemes
 	use("ful1e5/onedark.nvim")
