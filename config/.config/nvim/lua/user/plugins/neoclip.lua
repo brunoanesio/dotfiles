@@ -1,4 +1,5 @@
 require("neoclip").setup({
+	default_register = { '"', "+", "*" },
 	keys = {
 		telescope = {
 			i = {
