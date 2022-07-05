@@ -160,7 +160,7 @@ local mappings = {
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		F = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer Find" },
-		p = { "<cmd>Telescope project<cr>", "Projects" },
+		p = { "<cmd>Telescope projects<cr>", "Projects" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		-- C = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 	},
