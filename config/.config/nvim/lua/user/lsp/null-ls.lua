@@ -32,14 +32,15 @@ require("null-ls").setup({
 	sources = {
 		-- Python and Django
 		formatting.black,
-		-- diagnostics.flake8, -- conflics with pylsp-flake8
+		formatting.isort,
+		diagnostics.flake8,
 		formatting.djlint,
 		diagnostics.djlint,
 		-- Lua
 		formatting.stylua,
 		-- JS, TS
 		formatting.prettier,
-		-- diagnostics.eslint,
+		diagnostics.eslint,
 		code_actions.eslint,
 		-- Shell
 		formatting.shfmt,
