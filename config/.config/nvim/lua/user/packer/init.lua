@@ -7,6 +7,7 @@ return require("packer").startup(function(use)
 	use("stevearc/dressing.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("SmiteshP/nvim-navic")
+	use("ahmedkhalf/project.nvim")
 	-- QoL
 	use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
@@ -44,7 +45,6 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	use("nvim-telescope/telescope-symbols.nvim")
 	use("AckslD/nvim-neoclip.lua")
-	use("nvim-telescope/telescope-project.nvim")
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig",
