@@ -100,6 +100,7 @@ local mappings = {
 
 	b = {
 		name = "Buffer",
+		b = { "<cmd>JABSOpen<cr>", "See open buffers" },
 		d = { "<cmd>BufferLineSortByDirectory<cr>", "Sort by Directory" },
 		e = { "<cmd>BufferLineSortByExtension<cr>", "Sort by Extension" },
 		c = { "<cmd>BufferLinePick<cr>", "Pick Buffer" },
