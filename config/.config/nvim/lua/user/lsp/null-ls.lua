@@ -31,8 +31,8 @@ end
 require("null-ls").setup({
 	sources = {
 		-- Python and Django
-		formatting.black,
 		formatting.isort,
+		formatting.black,
 		diagnostics.flake8,
 		formatting.djlint,
 		diagnostics.djlint,
