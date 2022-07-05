@@ -30,19 +30,20 @@ end
 
 require("null-ls").setup({
 	sources = {
-		-- python and django
+		-- Python and Django
 		formatting.black,
-		-- diagnostics.flake8,
+		-- diagnostics.flake8, -- conflics with pylsp-flake8
 		formatting.djlint,
 		diagnostics.djlint,
-		-- lua
+		-- Lua
 		formatting.stylua,
-		-- js,ts,etc
+		-- JS, TS
 		formatting.prettier,
 		-- diagnostics.eslint,
 		code_actions.eslint,
-		-- bash
+		-- Shell
 		formatting.shfmt,
+		diagnostics.shellcheck,
 	},
 	on_attach = on_attach,
 })
