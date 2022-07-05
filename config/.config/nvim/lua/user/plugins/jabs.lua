@@ -14,7 +14,7 @@ require("jabs").setup({
 	},
 
 	-- Keymaps
-	keymaps = {
+	keymap = {
 		close = "d",
 		jump = "<cr>",
 		h_split = "h",
