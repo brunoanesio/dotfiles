@@ -6,6 +6,7 @@ require("nvim-treesitter.configs").setup({
 		"html",
 		"css",
 		"bash",
+		"markdown",
 		"markdown_inline",
 		"vim",
 		"rust",
