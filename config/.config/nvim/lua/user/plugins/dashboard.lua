@@ -30,7 +30,7 @@ local function footer()
 	local datetime = os.date(" %d-%m-%Y ")
 	local version = vim.version()
 	local plugins_count = vim.fn.len(vim.fn.globpath("~/.local/share/nvim/site/pack/packer/start", "*", 0, 1))
-	local nvim_version_info = "   Neovim v" .. version.major .. "." .. version.minor .. "." .. version.patch
+	local nvim_version_info = "   Neovim v" .. version.major .. "." .. version.minor .. "." .. version.patch
 
 	return datetime .. "  " .. plugins_count .. " plugins" .. nvim_version_info
 end
