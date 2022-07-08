@@ -47,12 +47,12 @@ return require("packer").startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use("lewis6991/gitsigns.nvim")
 	use("numToStr/Comment.nvim")
-	use("windwp/nvim-ts-autotag")
 	use({ "akinsho/toggleterm.nvim" })
 	use({ "goolord/alpha-nvim" })
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-refactor")
+	use("windwp/nvim-ts-autotag")
 	use("p00f/nvim-ts-rainbow")
 	-- Telescope
 	use("nvim-lua/plenary.nvim")
