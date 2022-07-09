@@ -1,10 +1,4 @@
 vim.api.nvim_create_augroup("bufcheck", { clear = true })
--- reload config file on change
-vim.api.nvim_create_autocmd("BufWritePost", {
-	group = "bufcheck",
-	pattern = vim.env.MYVIMRC,
-	command = "silent source %",
-})
 -- highlight yanks
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = "bufcheck",
