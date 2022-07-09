@@ -49,3 +49,6 @@ alias ..='cd ..'
 
 # wget
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+
+# rm
+alias rm='rm -I '
