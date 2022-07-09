@@ -22,7 +22,7 @@ return require("packer").startup(function(use)
 	use("folke/todo-comments.nvim")
 	use("stevearc/dressing.nvim")
 	use("nvim-lualine/lualine.nvim")
-	use("SmiteshP/nvim-navic")
+	-- use("SmiteshP/nvim-navic")
 	use("ahmedkhalf/project.nvim")
 	use({ "nvim-neorg/neorg", tag = "*" })
 	-- QoL
