@@ -10,6 +10,7 @@ require("nvim-treesitter.configs").setup({
 		"markdown_inline",
 		"vim",
 		"rust",
+		"norg",
 	},
 
 	sync_install = false,

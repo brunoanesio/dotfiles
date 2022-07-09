@@ -24,6 +24,7 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use("SmiteshP/nvim-navic")
 	use("ahmedkhalf/project.nvim")
+	use({ "nvim-neorg/neorg", tag = "*" })
 	-- QoL
 	use("lewis6991/impatient.nvim")
 	use("folke/which-key.nvim")
