@@ -10,11 +10,12 @@ export PATH=$HOME/.local/share/cargo/bin:$HOME/.local/bin:$PATH
 # Pfetch
 export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory"
 
-# ssh-agent
+# ssh-agent and gpg
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
+export GPG_TTY=$(tty)
 
 # Enviroment variables
 # XDG export
