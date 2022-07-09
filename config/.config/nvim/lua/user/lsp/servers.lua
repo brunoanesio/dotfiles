@@ -1,7 +1,7 @@
 -- LSP-Installer
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.setup({
-	ensure_installed = { "pyright", "sumneko_lua", "html", "tsserver", "cssls", "bashls", "emmet_ls" },
+	ensure_installed = { "pylsp", "sumneko_lua", "html", "tsserver", "cssls", "bashls", "emmet_ls" },
 	automatic_installation = true,
 	ui = {
 		border = "rounded",
@@ -63,5 +63,23 @@ require("typescript").setup({
 	server = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
+	},
+})
+-- Install extensions: PylspInstall pyls-flake8 pylsp-isort python-lsp-black pylsp-rope
+lspconfig.pylsp.setup({
+	on_attach = require("user.lsp.handlers").on_attach,
+	capabilities = require("user.lsp.handlers").capabilities,
+	settings = {
+		pylsp = {
+			plugins = {
+				flake8 = {
+					enabled = false, -- Disabled otherwise it gets duplicated
+					maxLineLength = 95,
+				},
+				rope_completion = {
+					enabled = false, -- Disabled otherwise it gets duplicated
+				},
+			},
+		},
 	},
 })

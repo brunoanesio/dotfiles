@@ -33,7 +33,7 @@ require("null-ls").setup({
 		-- Python and Django
 		formatting.isort,
 		formatting.black,
-		diagnostics.flake8,
+		-- diagnostics.flake8,
 		formatting.djlint,
 		diagnostics.djlint,
 		-- Lua
