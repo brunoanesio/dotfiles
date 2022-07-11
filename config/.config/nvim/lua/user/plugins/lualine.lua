@@ -20,7 +20,7 @@ require("lualine").setup({
 	options = {
 		component_separators = { left = "|", right = "|" },
 		section_separators = { left = "", right = "" },
-		theme = "onedark-nvim",
+		theme = "onedark",
 		disabled_filetypes = { "alpha" },
 		always_divide_middle = true,
 		globalstatus = true,

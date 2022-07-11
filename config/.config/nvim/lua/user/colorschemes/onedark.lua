@@ -1,4 +1,5 @@
 require("onedark").setup({
-	function_style = "italic",
+	functionStyle = "italic",
+	hideInactiveStatusline = true,
 	sidebars = { "terminal" },
 })

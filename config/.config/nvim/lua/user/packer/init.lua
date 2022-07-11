@@ -38,7 +38,7 @@ return require("packer").startup(function(use)
 	use("kylechui/nvim-surround")
 
 	-- Colorschemes
-	use("ful1e5/onedark.nvim")
+	use("monsonjeremy/onedark.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	-- IDE features
 	use("kyazdani42/nvim-tree.lua")
