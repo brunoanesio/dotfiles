@@ -158,7 +158,7 @@ floating_layout = layout.Floating(
 )
 
 widget_defaults = dict(
-    font="Iosevka",
+    font="JetBrainsMono Nerd Font Medium",
     fontsize=16,
     padding=6,
 )
