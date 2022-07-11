@@ -4,8 +4,8 @@
     follow = mouse
 
     ### Geometry ###
-    width = 400
-    height = 300
+    width = 440
+    height = 500
     origin = top-right
     offset = 10x40
     scale = 0
@@ -26,14 +26,15 @@
     horizontal_padding = 14
     text_icon_padding = 20
     frame_width = 2
-    frame_color = "#61afef"
+    frame_color = "#89B4FA"
+    gap_size = 0
     separator_color = frame
     sort = yes
     idle_threshold = 120
 
     ### Text ###
 
-    font = Iosevka 12
+    font = JetBrainsMono Nerd Font 12
 
     line_height = 0
     markup = full
@@ -49,10 +50,12 @@
 
     ### Icons ###
 
+    enable_recursive_icon_lookup = true
+    icon_theme = Papirus
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /usr/share/icons/Papirus/16x16/
+    icon_path = /usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/
 
     ### History ###
 
@@ -89,21 +92,21 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#282c34"
-    foreground = "#abb2bf"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
     timeout = 10
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#282c34"
-    foreground = "#abb2bf"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
     timeout = 10
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#e06c75"
-    foreground = "#282c34"
-    frame_color = "#ff0000"
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#FAB387"
     timeout = 0
     #default_icon = /path/to/icon
 
