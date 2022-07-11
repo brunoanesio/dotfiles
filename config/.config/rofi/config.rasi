@@ -1,14 +1,18 @@
 configuration {
 	modi: "window,run,drun";
-	font: "Iosevka 12";
+	font: "JetBrainsMono Nerd Font 14";
 	show-icons: true; 
 	terminal: "Kitty";
 	icon-theme: "Papirus";
-	drun-display-format: "{name}";
-	display-window: "Janelas";
-	display-drun: "Aplicativos";
-	display-calc: "Calculadora";
-	display-emoji: "Emojis";
+	drun-display-format: "{icon} {name}";
+    location: 0;
+    hide-scrollbar: true;
+    disable-history: false;
+	display-window: "﩯Janelas";
+	display-drun: " Aplicativos";
+	display-calc: " Calculadora";
+	display-emoji: " Emojis";
+    sidebar-mode: false;
   timeout {
       action: "kb-cancel";
       delay:  0;
@@ -18,4 +22,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/onedark.rasi"
+@theme "~/.config/rofi/catppuccin.rasi"
