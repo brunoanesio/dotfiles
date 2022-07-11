@@ -1,12 +1,11 @@
-from typing import List  # noqa: F401
-
 import os
 import subprocess
-from libqtile import bar, layout, widget, hook
+from typing import List  # noqa: F401
+
+from colors import catppuccin
+from libqtile import bar, hook, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-
-from colors import onedark
 
 mod = "mod4"
 terminal = "kitty -1"
@@ -17,22 +16,29 @@ keys = [
     Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(),
-        desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "Left", lazy.layout.shuffle_left(),
-        desc="Move window to the left"),
-    Key([mod, "shift"], "Right", lazy.layout.shuffle_right(),
-        desc="Move window to the right"),
+    Key(
+        [mod, "shift"],
+        "Left",
+        lazy.layout.shuffle_left(),
+        desc="Move window to the left",
+    ),
+    Key(
+        [mod, "shift"],
+        "Right",
+        lazy.layout.shuffle_right(),
+        desc="Move window to the right",
+    ),
     Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(),
-        desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(),
-        desc="Grow window to the right"),
+    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key(
+        [mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"
+    ),
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod, "shift", "control"], "h", lazy.layout.swap_column_left()),
@@ -68,27 +74,27 @@ keys = [
     Key([mod], "y", lazy.spawn("rofi -show emoji -modi emoji")),
     Key([mod], "c", lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort")),
     # Player controls
-    Key([], "XF86AudioPlay", lazy.spawn(
-        "playerctl --player=playerctld play-pause")),
-    Key([], "XF86AudioPause", lazy.spawn(
-        "playerctl --player=playerctld play-pause")),
+    Key([], "XF86AudioPlay", lazy.spawn("playerctl --player=playerctld play-pause")),
+    Key([], "XF86AudioPause", lazy.spawn("playerctl --player=playerctld play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl --player=playerctld next")),
-    Key([], "XF86AudioPrev", lazy.spawn(
-        "playerctl --player=playerctld previous")),
+    Key([], "XF86AudioPrev", lazy.spawn("playerctl --player=playerctld previous")),
     # Volume keys
-    Key([], "XF86AudioMute", lazy.spawn(
-        "pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ +2%")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ -2%")),
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    Key(
+        [],
+        "XF86AudioRaiseVolume",
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%"),
+    ),
+    Key(
+        [],
+        "XF86AudioLowerVolume",
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%"),
+    ),
     # Program shortcuts
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "b", lazy.spawn("firefox")),
     Key([mod], "g", lazy.spawn("kitty ranger")),
-
-    Key([mod], "Print", lazy.spawn(
-        "maim -s ~/Imagens/screenshots/$(date +%d%m%y%H%M%S).png")),
+    Key([mod], "Print", lazy.spawn("screenshot.sh select")),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -108,8 +114,7 @@ for i in groups:
                 [mod, "shift"],
                 i.name,
                 lazy.window.togroup(i.name, switch_group=True),
-                desc="Switch to & move focused window to group {}".format(
-                    i.name),
+                desc="Switch to & move focused window to group {}".format(i.name),
             ),
         ]
     )
@@ -119,15 +124,18 @@ def layout_theme():
     return {
         "border_width": 2,
         "margin": 4,
-        "border_focus": onedark["blue"],
-        "border_normal": onedark["black"]
+        "border_focus": catppuccin["blue"],
+        "border_normal": catppuccin["black"],
     }
 
 
 layouts = [
     layout.MonadTall(**layout_theme()),
     layout.Columns(
-        border_focus=onedark["blue"], border_normal=onedark['black'], border_width=2),
+        border_focus=catppuccin["blue"],
+        border_normal=catppuccin["black"],
+        border_width=2,
+    ),
     layout.Max(),
     # layout.Tile(**layout_theme()),
     # layout.Zoomy(**layout_theme()),
@@ -145,7 +153,7 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
         Match(wm_class="pinentry-gtk-2"),  # GPG key password entry
     ],
-    border_focus=onedark['blue'],
+    border_focus=catppuccin["blue"],
     border_width=2,
 )
 
@@ -160,23 +168,17 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.Sep(
-                    linewidth=0,
-                    padding=5
-                ),
+                widget.Sep(linewidth=0, padding=5),
                 widget.GroupBox(
                     borderwidth=0,
-                    active=onedark['fg'],
-                    inactive=onedark['gray'],
+                    active=catppuccin["fg"],
+                    inactive=catppuccin["gray"],
                     disable_drag=True,
-                    block_highlight_text_color=onedark['blue'],
-                    highlight_color=onedark['bg'],
-                    highlight_method='line',
+                    block_highlight_text_color=catppuccin["blue"],
+                    highlight_color=catppuccin["bg"],
+                    highlight_method="line",
                 ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.Prompt(),
                 widget.WindowName(
                     max_chars=40,
@@ -186,7 +188,7 @@ screens = [
                     padding=0,
                 ),
                 widget.CurrentLayout(
-                    foreground=onedark['yellow'],
+                    foreground=catppuccin["yellow"],
                 ),
                 # widget.Sep(
                 #     foreground=onedark['gray'],
@@ -202,86 +204,61 @@ screens = [
                 #     no_update_string='N/A Updates',
                 #     update_interval=60,
                 # ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
-                widget.TextBox(
-                    text='',
-                    foreground=onedark['blue']
-                ),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
+                widget.TextBox(text="", foreground=catppuccin["blue"]),
                 widget.CPU(
-                    format='{load_percent}%',
+                    format="{load_percent}%",
                 ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
-                widget.TextBox(
-                    text='',
-                    foreground=onedark['magenta']
-                ),
-                widget.Memory(
-                    format='{MemUsed:.2f}{mm}',
-                    measure_mem='G'
-                ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
-                widget.TextBox(
-                    text='墳',
-                    foreground=onedark['cyan']
-                ),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
+                widget.TextBox(text="", foreground=catppuccin["magenta"]),
+                widget.Memory(format="{MemUsed:.2f}{mm}", measure_mem="G"),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
+                widget.TextBox(text="墳", foreground=catppuccin["cyan"]),
                 widget.PulseVolume(
-                    mouse_callbacks={'Button3': lazy.spawn("pavucontrol")},
-                    update_interval=0.1
+                    mouse_callbacks={"Button3": lazy.spawn("pavucontrol")},
+                    update_interval=0.1,
                 ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.TextBox(
                     # text='',
-                    text=' ',
-                    foreground=onedark['green']
+                    text=" ",
+                    foreground=catppuccin["green"],
                 ),
                 widget.Clock(
                     # format="%H:%M",
                     format="%a %d %b, %H:%M",
                 ),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.Systray(
                     padding=10,
                 ),
                 widget.Spacer(length=10),
-                widget.Sep(
-                    foreground=onedark['gray'],
-                    padding=10
-                ),
+                widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.QuickExit(
-                    default_text=' ',
-                    foreground=onedark['red'],
+                    default_text=" ",
+                    foreground=catppuccin["red"],
                     padding=8,
-                    fontsize=13
+                    fontsize=13,
                 ),
             ],
             size=30,
-            background=onedark['bg'],
-            foreground=onedark['fg'],
+            background=catppuccin["bg"],
+            foreground=catppuccin["fg"],
         ),
     ),
 ]
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
+    Drag(
+        [mod],
+        "Button1",
+        lazy.window.set_position_floating(),
+        start=lazy.window.get_position(),
+    ),
+    Drag(
+        [mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()
+    ),
     Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
@@ -313,5 +290,5 @@ wmname = "LG3D"
 
 @hook.subscribe.startup_once
 def autostart():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    home = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.call([home])
