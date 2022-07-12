@@ -103,12 +103,6 @@ local mappings = {
 		b = { "<cmd>JABSOpen<cr>", "See open buffers" },
 		n = { "<cmd>bnext<cr>", "Next Buffer" },
 		p = { "<cmd>bprevious<cr>", "Prev Buffer" },
-		d = { "<cmd>BufferLineSortByDirectory<cr>", "Sort by Directory" },
-		e = { "<cmd>BufferLineSortByExtension<cr>", "Sort by Extension" },
-		c = { "<cmd>BufferLinePick<cr>", "Pick Buffer" },
-		C = { "<cmd>BufferLinePickClosePick<cr>", "Close Pick Buffer" },
-		N = { "<cmd>BufferLineMoveNext<cr>", "Move Next Buffer" },
-		P = { "<cmd>BufferLineMovePrev<cr>", "Move Prev Buffer" },
 	},
 
 	g = {
