@@ -19,6 +19,7 @@ return require("packer").startup(function(use)
 	-- Misc
 	use("kyazdani42/nvim-web-devicons")
 	use("andweeb/presence.nvim")
+	use("ellisonleao/glow.nvim")
 	use("folke/todo-comments.nvim")
 	use("stevearc/dressing.nvim")
 	use("nvim-lualine/lualine.nvim")
