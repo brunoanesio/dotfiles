@@ -62,8 +62,8 @@ keys = [
     Key([mod, "shift"], "e", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # Monad layout keys
-    Key([mod], "l", lazy.layout.grow()),
-    Key([mod], "h", lazy.layout.shrink()),
+    Key([mod], "h", lazy.layout.grow()),
+    Key([mod], "l", lazy.layout.shrink()),
     Key([mod], "n", lazy.layout.normalize()),
     Key([mod], "m", lazy.layout.maximize()),
     # Floating and fullscreen
