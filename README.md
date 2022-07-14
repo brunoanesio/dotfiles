@@ -1,13 +1,9 @@
-# <h1 style="text-align: center;">👋Welcome to my dotfiles🐧</h1>
-
----
+<h1 align="center">👋Welcome to my dotfiles🐧</h1>
 
 Configuration files for my linux setup.
 Currently I use [qTile](https://github.com/qtile) with [Catppuccin](https://github.com/catppuccin).
 
 ![qtile](./screenshots/qtile-catppuccin.png)
-
----
 
 ## About
 
@@ -19,3 +15,4 @@ Currently I use [qTile](https://github.com/qtile) with [Catppuccin](https://gith
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - GTK theme: [catppuccin](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)
+- Document Viewer: [zathura](https://git.pwmt.org/pwmt/zathura)
