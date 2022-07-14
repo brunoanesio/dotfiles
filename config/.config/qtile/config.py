@@ -94,6 +94,8 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "b", lazy.spawn("firefox")),
     Key([mod], "g", lazy.spawn("kitty ranger")),
+    Key([], "Print", lazy.spawn("screenshot select")),
+    Key([mod], "Print", lazy.spawn("screenshot")),
 ]
 
 groups = [Group(i) for i in "123456789"]
