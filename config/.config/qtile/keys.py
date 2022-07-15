@@ -62,7 +62,7 @@ keys = [
     Key([mod], "n", lazy.layout.normalize()),
     Key([mod], "m", lazy.layout.maximize()),
     # Floating and fullscreen
-    Key([mod, "shift"], "f", lazy.layout.toggle_floating()),
+    Key([mod, "shift"], "f", lazy.window.toggle_floating()),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     # Rofi
     Key([mod], "d", lazy.spawn("rofi -modi drun,run -show drun")),
