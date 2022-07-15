@@ -11,6 +11,7 @@ export PATH=$HOME/.local/share/cargo/bin:$HOME/.local/bin:$PATH
 export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory"
 
 # gpg
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GPG_TTY=$(tty)
 
 # Enviroment variables
@@ -24,7 +25,7 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export ZDOTDIR=$HOME/.config/zsh
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+# export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # . "/home/frost/.local/share/cargo/env"
