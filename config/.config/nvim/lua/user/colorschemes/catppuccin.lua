@@ -18,6 +18,11 @@ catppuccin.setup({
 		types = {},
 		operators = {},
 	},
+	compile = {
+		enabled = true,
+		path = vim.fn.stdpath("cache") .. "/catppuccin",
+		suffix = "_compiled",
+	},
 	integrations = {
 		which_key = true,
 		lightspeed = true,
