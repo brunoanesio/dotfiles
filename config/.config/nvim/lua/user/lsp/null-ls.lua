@@ -40,7 +40,7 @@ require("null-ls").setup({
 		formatting.stylua,
 		-- JS, TS
 		formatting.prettier,
-		diagnostics.eslint,
+		-- diagnostics.eslint,
 		code_actions.eslint,
 		-- Shell
 		formatting.shfmt,
