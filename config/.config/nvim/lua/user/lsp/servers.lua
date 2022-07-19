@@ -1,7 +1,7 @@
 -- LSP-Installer
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.setup({
-	ensure_installed = { "pylsp", "sumneko_lua", "html", "tsserver", "cssls", "bashls", "emmet_ls" },
+	ensure_installed = { "pylsp", "sumneko_lua", "html", "tsserver", "cssls", "bashls", "emmet_ls", "jsonls" },
 	automatic_installation = true,
 	ui = {
 		border = "rounded",
@@ -81,5 +81,12 @@ lspconfig.pylsp.setup({
 				},
 			},
 		},
+	},
+})
+lspconfig.jsonls.setup({
+	on_attach = require("user.lsp.handlers").on_attach,
+	capabilities = require("user.lsp.handlers").capabilities,
+	init_options = {
+		provideFormatter = false,
 	},
 })
