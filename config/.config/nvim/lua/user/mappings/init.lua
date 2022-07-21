@@ -23,7 +23,7 @@ map("n", "<C-Down>", ":resize +2<CR>", opts)
 map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- jk fast enter
-map("i", "jk", "<ESC>", opts)
+-- map("i", "jk", "<ESC>", opts)
 -- Stay in visual mode
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
