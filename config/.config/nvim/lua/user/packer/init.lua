@@ -40,7 +40,7 @@ return require("packer").startup(function(use)
 
 	-- Colorschemes
 	use("monsonjeremy/onedark.nvim")
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "catppuccin/nvim", as = "catppuccin", run = ":CatppuccinCompile" })
 	-- IDE features
 	use("kyazdani42/nvim-tree.lua")
 	use("rcarriga/nvim-notify")
