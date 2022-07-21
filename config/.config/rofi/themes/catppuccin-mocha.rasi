@@ -7,6 +7,8 @@
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
+    background-color: @bg-col;
+    text-color: @fg-col;
 
     width: 720;
     font: "JetBrainsMono Nerd Font 14";
@@ -89,6 +91,14 @@ button {
     text-color: @grey;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
+}
+
+message {
+  border-radius: 3px;
+  padding: 6px 0px 0px;
+  margin: 10px 0px 0px 20px;
+  border: 0px;
+  border-color: @border-col;
 }
 
 button selected {
