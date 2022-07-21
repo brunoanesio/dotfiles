@@ -22,4 +22,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/catppuccin.rasi"
+@theme "~/.config/rofi/themes/catppuccin-mocha.rasi"
