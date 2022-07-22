@@ -1,7 +1,7 @@
 <h1 align="center">👋Welcome to my dotfiles🐧</h1>
 
 Configuration files for my linux setup.
-Currently I use [qTile](https://github.com/qtile) with [Catppuccin](https://github.com/catppuccin).
+Currently I use [Qtile](https://github.com/qtile) with [Catppuccin](https://github.com/catppuccin).
 
 ![qtile](./screenshots/qtile-catppuccin.png)
 
