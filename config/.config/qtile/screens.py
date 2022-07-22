@@ -36,20 +36,6 @@ screens = [
                 widget.CurrentLayout(
                     foreground=catppuccin["yellow"],
                 ),
-                # widget.Sep(
-                #     foreground=onedark['gray'],
-                #     padding=10
-                # ),
-                # widget.TextBox(
-                #     text='ﮮ',
-                #     foreground=onedark['yellow'],
-                #     padding=8
-                # ),
-                # widget.CheckUpdates(
-                #     custom_command='checkupdates',
-                #     no_update_string='N/A Updates',
-                #     update_interval=60,
-                # ),
                 widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.TextBox(text="", foreground=catppuccin["blue"]),
                 widget.CPU(
@@ -66,12 +52,10 @@ screens = [
                 ),
                 widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.TextBox(
-                    # text='',
                     text=" ",
                     foreground=catppuccin["green"],
                 ),
                 widget.Clock(
-                    # format="%H:%M",
                     format="%a %d %b, %H:%M",
                 ),
                 widget.Sep(foreground=catppuccin["gray"], padding=10),
@@ -87,6 +71,7 @@ screens = [
                     fontsize=13,
                 ),
             ],
+            margin=[4, 4, 2, 4],
             size=30,
             background=catppuccin["bg"],
             foreground=catppuccin["fg"],
