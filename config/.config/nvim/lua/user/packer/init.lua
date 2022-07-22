@@ -39,12 +39,12 @@ return require("packer").startup(function(use)
 	use("kylechui/nvim-surround")
 
 	-- Colorschemes
-	use("monsonjeremy/onedark.nvim")
+	-- use("monsonjeremy/onedark.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin", run = ":CatppuccinCompile" })
 	-- IDE features
 	use("kyazdani42/nvim-tree.lua")
 	use("rcarriga/nvim-notify")
-	use("akinsho/bufferline.nvim")
+	-- use("akinsho/bufferline.nvim")
 	use("windwp/nvim-autopairs")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("lewis6991/gitsigns.nvim")
