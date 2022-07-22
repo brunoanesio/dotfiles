@@ -72,6 +72,8 @@ screens = [
                 ),
             ],
             margin=[4, 4, 2, 4],
+            # border_width=2,
+            # border_color=catppuccin["blue"],
             size=30,
             background=catppuccin["bg"],
             foreground=catppuccin["fg"],

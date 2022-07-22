@@ -112,3 +112,12 @@ wmname = "Qtile"
 def autostart():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.call([home])
+
+
+@hook.subscribe.startup
+def _():
+    screens.window.window.set_property(
+        name="WM_NAME",
+        value="QTILE_BAR",
+        type="STRING",
+    )
