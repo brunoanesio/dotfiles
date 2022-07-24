@@ -3,6 +3,13 @@ require("gitsigns").setup({
 	current_line_blame_opts = {
 		delay = 250,
 	},
+	preview_config = {
+		border = "rounded",
+		style = "minimal",
+		relative = "cursor",
+		row = 0,
+		col = 1,
+	},
 	on_attach = function(bufnr)
 		local gs = package.loaded.gitsigns
 
