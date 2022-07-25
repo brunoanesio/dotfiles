@@ -66,7 +66,10 @@ return require("packer").startup(function(use)
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig",
-		"williamboman/nvim-lsp-installer",
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		-- "williamboman/nvim-lsp-installer",
 		"jose-elias-alvarez/typescript.nvim",
 		-- CMP
 		"hrsh7th/nvim-cmp",

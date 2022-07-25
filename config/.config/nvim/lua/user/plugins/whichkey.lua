@@ -129,7 +129,7 @@ local mappings = {
 		D = { "<cmd>Telescope definitions<cr>", "Definitions" },
 		f = { "<cmd>lua vim.lsp.buf.format({async=true})<cr>", "Format" },
 		I = { "<cmd>LspInfo<cr>", "Info" },
-		i = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		i = { "<cmd>Mason<cr>", "Mason Info" },
 		j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
 		k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
 		K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
