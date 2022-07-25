@@ -43,4 +43,4 @@ bindkey '^[[B' history-substring-search-down
 eval "$(starship init zsh)"
 
 # Spicetify path
-export PATH=$PATH:/home/frost/.spicetify
+export PATH=$HOME/.spicetify:$PATH
