@@ -44,7 +44,7 @@ require("null-ls").setup({
 		code_actions.eslint,
 		-- Shell
 		formatting.shfmt,
-		diagnostics.shellcheck,
+		-- diagnostics.shellcheck,
 	},
 	on_attach = on_attach,
 })
