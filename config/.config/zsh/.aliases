@@ -55,3 +55,6 @@ alias rm='rm -I '
 
 # lazygit
 alias lg='lazygit'
+
+# helix
+alias hx='helix'
