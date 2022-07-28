@@ -102,7 +102,7 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
 auto_minimize = True
-wmname = "Qtile"
+wmname = "qtile"
 # wmname = "LG3D"
 
 # Hooks
@@ -112,12 +112,3 @@ wmname = "Qtile"
 def autostart():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.call([home])
-
-
-@hook.subscribe.startup
-def _():
-    screens.window.window.set_property(
-        name="WM_NAME",
-        value="QTILE_BAR",
-        type="STRING",
-    )
