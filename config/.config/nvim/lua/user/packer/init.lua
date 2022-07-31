@@ -64,12 +64,12 @@ return require("packer").startup(function(use)
 	use("nvim-telescope/telescope-symbols.nvim")
 	use("AckslD/nvim-neoclip.lua")
 	-- LSP
+	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	use({
 		"neovim/nvim-lspconfig",
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		-- "williamboman/nvim-lsp-installer",
 		"jose-elias-alvarez/typescript.nvim",
 		-- CMP
 		"hrsh7th/nvim-cmp",
