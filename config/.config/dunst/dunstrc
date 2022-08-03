@@ -74,7 +74,7 @@
 
     class = Dunst
 
-    corner_radius = 12
+    corner_radius = 8
 
     ignore_dbusclose = false
 

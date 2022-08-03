@@ -29,10 +29,10 @@ screens = [
                 widget.WindowName(
                     max_chars=40,
                 ),
-                widget.CurrentLayoutIcon(
-                    scale=0.65,
-                    padding=0,
-                ),
+                # widget.CurrentLayoutIcon(
+                #     scale=0.65,
+                #     padding=0,
+                # ),
                 widget.CurrentLayout(
                     foreground=catppuccin["yellow"],
                 ),
@@ -52,7 +52,7 @@ screens = [
                 ),
                 widget.Sep(foreground=catppuccin["gray"], padding=10),
                 widget.TextBox(
-                    text=" ",
+                    text="",
                     foreground=catppuccin["green"],
                 ),
                 widget.Clock(
@@ -71,7 +71,7 @@ screens = [
                     fontsize=13,
                 ),
             ],
-            margin=[4, 4, 2, 4],
+            # margin=[4, 4, 2, 4],
             # border_width=2,
             # border_color=catppuccin["blue"],
             size=30,
