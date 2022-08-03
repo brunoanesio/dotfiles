@@ -51,10 +51,13 @@ alias ..='cd ..'
 alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts '
 
 # rm
-alias rm='rm -I '
+# alias rm='rm -I '
 
 # lazygit
 alias lg='lazygit'
 
 # helix
 alias hx='helix'
+
+# nnn
+alias n='nnn'
