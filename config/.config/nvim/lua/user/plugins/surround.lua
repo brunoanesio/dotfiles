@@ -1,8 +1,13 @@
 require("nvim-surround").setup({
-	keymaps = { -- vim-surround style keymaps
-		insert = "ys",
-		insert_line = "yss",
+	keymaps = {
+		insert = "<C-g>s",
+		insert_line = "<C-g>S",
+		normal = "ys",
+		normal_cur = "yss",
+		normal_line = "yS",
+		normal_cur_line = "ySS",
 		visual = "S",
+		visual_line = "gS",
 		delete = "ds",
 		change = "cs",
 	},
@@ -16,7 +21,6 @@ require("nvim-surround").setup({
 			[">"] = { "<", ">" },
 			["["] = { "[ ", " ]" },
 			["]"] = { "[", "]" },
-			-- Define pairs based on function evaluations!
 			["i"] = function()
 				return {
 					require("nvim-surround.utils").get_input("Enter the left delimiter: "),
@@ -36,17 +40,16 @@ require("nvim-surround").setup({
 			["`"] = { "`", "`" },
 		},
 		HTML = {
-			["t"] = "type", -- Change just the tag type
-			["T"] = "whole", -- Change the whole tag contents
+			["t"] = "type",
+			["T"] = "whole",
 		},
 		aliases = {
-			["a"] = ">", -- Single character aliases apply everywhere
+			["a"] = ">",
 			["b"] = ")",
 			["B"] = "}",
 			["r"] = "]",
-			-- Table aliases only apply for changes/deletions
-			["q"] = { '"', "'", "`" }, -- Any quote character
-			["s"] = { ")", "]", "}", ">", "'", '"', "`" }, -- Any surrounding delimiter
+			["q"] = { '"', "'", "`" },
+			["s"] = { ")", "]", "}", ">", "'", '"', "`" },
 		},
 	},
 	highlight_motion = { -- Highlight before inserting/changing surrounds
