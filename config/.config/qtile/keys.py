@@ -88,8 +88,7 @@ keys = [
     # Program shortcuts
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "b", lazy.spawn("firefox")),
-    Key([mod], "g", lazy.spawn("kitty ranger")),
-    Key([mod], "n", lazy.spawn("kitty nnn")),
+    Key([mod], "g", lazy.spawn("kitty -e ranger")),
     Key([], "Print", lazy.spawn("screenshot select")),
     Key([mod], "Print", lazy.spawn("screenshot")),
 ]

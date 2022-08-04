@@ -3,6 +3,7 @@ import subprocess
 from typing import List  # noqa: F401
 
 from colors import catppuccin
+from groups import groups
 from keys import keys
 from libqtile import bar, hook, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
@@ -13,33 +14,11 @@ mod = "mod4"
 terminal = "kitty -1"
 
 widget_defaults = dict(
-    font="JetBrainsMono Nerd Font Medium",
+    font="JetBrainsMonoMedium Nerd Font",
     fontsize=16,
     padding=6,
 )
 extension_defaults = widget_defaults.copy()
-
-groups = [Group(i) for i in "123456789"]
-
-for i in groups:
-    keys.extend(
-        [
-            # mod1 + letter of group = switch to group
-            Key(
-                [mod],
-                i.name,
-                lazy.group[i.name].toscreen(),
-                desc="Switch to group {}".format(i.name),
-            ),
-            # mod1 + shift + letter of group = switch to & move focused window to group
-            Key(
-                [mod, "shift"],
-                i.name,
-                lazy.window.togroup(i.name, switch_group=True),
-                desc="Switch to & move focused window to group {}".format(i.name),
-            ),
-        ]
-    )
 
 
 def layout_theme():
