@@ -5,7 +5,7 @@ export EDITOR=nvim
 export DIFFPROG="nvim -d"
 
 # Path
-export PATH=$HOME/.local/share/cargo/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/.emacs.d/bin:$HOME/.local/share/cargo/bin:$HOME/.local/bin:$PATH
 
 # Pfetch
 export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory"
