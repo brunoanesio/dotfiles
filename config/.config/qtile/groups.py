@@ -30,9 +30,9 @@ groups.append(
     ScratchPad(
         "scratchpad",
         [
-            DropDown("term", "kitty", width=0.55, height=0.6, x=0.25, y=0.2),
-            DropDown("nvim", "kitty -e nvim", width=0.7, height=0.6, x=0.155, y=0.2),
-            DropDown("nnn", "kitty -e nnn", width=0.7, height=0.6, x=0.155, y=0.2),
+            DropDown("term", "kitty", width=0.7, height=0.6, x=0.150, y=0.2),
+            DropDown("nvim", "kitty -e nvim", width=0.7, height=0.6, x=0.150, y=0.2),
+            DropDown("nnn", "kitty -e nnn", width=0.7, height=0.6, x=0.150, y=0.2),
         ],
     )
 )
