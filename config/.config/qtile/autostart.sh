@@ -6,5 +6,6 @@ setxkbmap -layout br &
 numlockx &
 nm-applet &
 picom --experimental-backends -b &
+/usr/bin/emacs --daemon &
 corectrl &
 keepassxc &

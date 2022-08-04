@@ -65,7 +65,7 @@ keys = [
     Key([mod, "shift"], "f", lazy.window.toggle_floating()),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     # Rofi
-    Key([mod], "d", lazy.spawn("rofi -modi drun,run -show drun")),
+    Key([mod], "d", lazy.spawn("rofi -modi drun,run,window -show drun")),
     Key([mod], "y", lazy.spawn("rofi -show emoji -modi emoji")),
     Key([mod], "c", lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort")),
     # Player controls
