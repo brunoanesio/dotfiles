@@ -34,4 +34,6 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export GOPATH="$XDG_DATA_HOME"/go
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export DOOMDIR="$XDG_CONFIG_HOME"/doom
 . "/home/frost/.local/share/cargo/env"
