@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,run,drun";
+	modi: "run,drun,window";
 	font: "JetBrainsMono Nerd Font 14";
 	show-icons: true; 
 	terminal: "Kitty";
@@ -8,11 +8,12 @@ configuration {
     location: 0;
     hide-scrollbar: true;
     disable-history: false;
-	display-window: "﩯Janelas";
+	display-window: "﩯 Janelas";
 	display-drun: " Aplicativos";
+    display-run: "  Run";
 	display-calc: " Calculadora";
 	display-emoji: " Emojis";
-    sidebar-mode: false;
+    sidebar-mode: true;
   timeout {
       action: "kb-cancel";
       delay:  0;
@@ -22,4 +23,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/themes/catppuccin-mocha.rasi"
+@theme "catppuccin-mocha"
