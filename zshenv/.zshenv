@@ -35,5 +35,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export GOPATH="$XDG_DATA_HOME"/go
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons
 export DOOMDIR="$XDG_CONFIG_HOME"/doom
 . "/home/frost/.local/share/cargo/env"
