@@ -8,7 +8,7 @@ Currently I use [qtile](https://github.com/qtile) with [Catppuccin](https://gith
 ## About
 
 - Shell: zsh - [Starship](https://github.com/starship/starship)
-- Editor: [NeoVim (dev release)](https://github.com/neovim/neovim)
+- Editor: [Neovim (dev release)](https://github.com/neovim/neovim)
 - File manager: [Ranger](https://github.com/ranger/ranger), Thunar
 - Font: [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - Terminal: [Kitty](https://github.com/kovidgoyal/kitty/)
