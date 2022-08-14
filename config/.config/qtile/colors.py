@@ -43,17 +43,21 @@ tokyonight = {
     "white": "#a9b1d6",
 }
 
-catppuccin = {
+catppuccin_mocha = {
     "fg": "#cdd6f4",
     "bg": "#1e1e2e",
     "sbg": "#f5e0dc",
-    "black": "#45475a",
+    "black": "#313244",
     "gray": "#585b70",
     "red": "#f38ba8",
     "green": "#a6e3a1",
     "yellow": "#f9e2af",
     "blue": "#89b4fa",
-    "magenta": "#f5c2e7",
+    "magenta": "#cba6f7",
     "cyan": "#94e2d5",
     "white": "#bac2de",
+    "pink": "#f5c2e7",
+    "lavender": "#b4befe",
+    "sapphire": "#74c7ec",
+    "maroon": "#eba0ac",
 }

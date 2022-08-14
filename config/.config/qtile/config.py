@@ -2,7 +2,7 @@ import os
 import subprocess
 from typing import List  # noqa: F401
 
-from colors import catppuccin
+from colors import catppuccin_mocha
 from groups import groups
 from keys import keys
 from libqtile import bar, hook, layout, widget
@@ -25,16 +25,16 @@ def layout_theme():
     return {
         "border_width": 2,
         "margin": 4,
-        "border_focus": catppuccin["blue"],
-        "border_normal": catppuccin["black"],
+        "border_focus": catppuccin_mocha["blue"],
+        "border_normal": catppuccin_mocha["black"],
     }
 
 
 layouts = [
     layout.MonadTall(**layout_theme()),
     layout.Columns(
-        border_focus=catppuccin["blue"],
-        border_normal=catppuccin["black"],
+        border_focus=catppuccin_mocha["blue"],
+        border_normal=catppuccin_mocha["black"],
         border_width=2,
     ),
     layout.Max(),
@@ -54,7 +54,7 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
         Match(wm_class="pinentry-gtk-2"),  # GPG key password entry
     ],
-    border_focus=catppuccin["blue"],
+    border_focus=catppuccin_mocha["blue"],
     border_width=2,
 )
 
