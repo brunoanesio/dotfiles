@@ -12,11 +12,12 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+transparent = "#00000000"
 decor = {
     "decorations": [
         RectDecoration(
             use_widget_background=True,
-            radius=8,
+            radius=0,
             filled=True,
             padding_y=2,
         )
@@ -29,7 +30,6 @@ screens = [
         top=bar.Bar(
             [
                 widget.Sep(linewidth=0, padding=5),
-                widget.CurrentLayoutIcon(scale=0.70, padding=2),
                 widget.GroupBox(
                     borderwidth=0,
                     active=catppuccin["fg"],
@@ -39,12 +39,12 @@ screens = [
                     highlight_color=catppuccin["bg"],
                     highlight_method="line",
                 ),
-                widget.Sep(foreground=catppuccin["gray"], padding=10, size_percent=50),
+                widget.CurrentLayoutIcon(scale=0.70, padding=2),
                 widget.Prompt(),
                 widget.WindowName(
                     max_chars=40,
                 ),
-                widget.Sep(foreground=catppuccin["blue"], padding=10, size_percent=50),
+                widget.Spacer(length=10),
                 widget.CPU(
                     fmt=" {}",
                     format="{load_percent}%",
@@ -52,9 +52,7 @@ screens = [
                     foreground=catppuccin["bg"],
                     **decor,
                 ),
-                widget.Sep(
-                    foreground=catppuccin["magenta"], padding=10, size_percent=50
-                ),
+                widget.Spacer(length=10),
                 widget.Memory(
                     fmt=" {}",
                     format="{MemUsed:.2f}{mm}",
@@ -63,7 +61,7 @@ screens = [
                     foreground=catppuccin["bg"],
                     **decor,
                 ),
-                widget.Sep(foreground=catppuccin["cyan"], padding=10, size_percent=50),
+                widget.Spacer(length=10),
                 widget.PulseVolume(
                     fmt="墳 {}",
                     mouse_callbacks={"Button3": lazy.spawn("pavucontrol")},
@@ -72,7 +70,7 @@ screens = [
                     foreground=catppuccin["bg"],
                     **decor,
                 ),
-                widget.Sep(foreground=catppuccin["green"], padding=10, size_percent=50),
+                widget.Spacer(length=10),
                 widget.Clock(
                     fmt=" {}",
                     format="%a, %d %b",
@@ -80,9 +78,7 @@ screens = [
                     foreground=catppuccin["bg"],
                     **decor,
                 ),
-                widget.Sep(
-                    foreground=catppuccin["yellow"], padding=10, size_percent=50
-                ),
+                widget.Spacer(length=10),
                 widget.Clock(
                     fmt=" {}",
                     format="%H:%M",
@@ -90,9 +86,7 @@ screens = [
                     foreground=catppuccin["bg"],
                     **decor,
                 ),
-                widget.Sep(
-                    foreground=catppuccin["yellow"], padding=10, size_percent=50
-                ),
+                widget.Spacer(length=8),
                 widget.Systray(
                     padding=8,
                 ),

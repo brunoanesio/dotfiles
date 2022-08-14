@@ -5,6 +5,7 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 terminal = "kitty -1"
+browser = "firefox"
 keys = [
     # Switch between windows
     Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
@@ -87,7 +88,7 @@ keys = [
     ),
     # Program shortcuts
     Key([mod], "e", lazy.spawn("thunar")),
-    Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "b", lazy.spawn(browser)),
     Key([mod], "g", lazy.spawn("kitty -e ranger")),
     Key([], "Print", lazy.spawn("screenshot select")),
     Key([mod], "Print", lazy.spawn("screenshot")),
