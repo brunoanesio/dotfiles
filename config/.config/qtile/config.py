@@ -14,8 +14,8 @@ mod = "mod4"
 terminal = "kitty -1"
 
 widget_defaults = dict(
-    font="JetBrainsMonoMedium Nerd Font",
-    fontsize=16,
+    font="Iosevka Mayukai Codepro Medium",
+    fontsize=17,
     padding=6,
 )
 extension_defaults = widget_defaults.copy()

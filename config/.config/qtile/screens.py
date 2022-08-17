@@ -5,13 +5,6 @@ from libqtile.lazy import lazy
 from qtile_extras import widget
 from qtile_extras.widget.decorations import RectDecoration
 
-widget_defaults = dict(
-    font="JetBrainsMonoMedium Nerd Font",
-    fontsize=16,
-    padding=6,
-)
-extension_defaults = widget_defaults.copy()
-
 transparent = "#00000000"
 decor = {
     "decorations": [
