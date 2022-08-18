@@ -10,9 +10,9 @@ Currently I use [qtile](https://github.com/qtile) with [Catppuccin](https://gith
 - Shell: zsh - [Starship](https://github.com/starship/starship)
 - Editor: [Neovim (dev release)](https://github.com/neovim/neovim)
 - File manager: [Ranger](https://github.com/ranger/ranger), Thunar
-- Font: [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+- Font: [Iosevka Mayukai](https://github.com/Iosevka-Mayukai/Iosevka-Mayukai)
 - Terminal: [Kitty](https://github.com/kovidgoyal/kitty/)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
-- GTK theme: [catppuccin](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)
+- GTK theme: [catppuccin](https://github.com/catppuccin/gtk)
 - Document Viewer: [zathura](https://git.pwmt.org/pwmt/zathura)
