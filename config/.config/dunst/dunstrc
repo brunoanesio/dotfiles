@@ -53,9 +53,9 @@
     enable_recursive_icon_lookup = true
     icon_theme = Papirus
     icon_position = left
-    min_icon_size = 16
-    max_icon_size = 32
-    icon_path = /usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_path = /usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/64x64/devices/:/usr/share/icons/Papirus/64x64/places/
 
     ### History ###
 
