@@ -38,6 +38,7 @@ layouts = [
         border_width=2,
     ),
     layout.Max(),
+    layout.Bsp(border_on_single=True, **layout_theme()),
     # layout.Tile(**layout_theme()),
     # layout.Zoomy(**layout_theme()),
 ]
