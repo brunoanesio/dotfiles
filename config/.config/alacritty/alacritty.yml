@@ -6,10 +6,6 @@
 
 window:
   # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
   decorations: none
 
   # Window title
@@ -26,9 +22,6 @@ window:
   #general: Alacritty
 
   # GTK theme variant (Linux/BSD only)
-  #
-  # Override the variant of the GTK theme. Commonly supported values are `dark`
-  # and `light`. Set this to `None` to use the default theme variant.
   gtk_theme_variant: dark
 
   # Background opacity
@@ -46,15 +39,15 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Mayukai Codepro
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Medium
 
   # Bold font face
   bold:
     # Font family
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Mayukai Codepro
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -62,7 +55,7 @@ font:
   # Italic font face
   italic:
     # Font family
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Mayukai Codepro
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -70,7 +63,7 @@ font:
   # Bold italic font face
   bold_italic:
     # Font family
-    family: JetBrains Mono Nerd Font
+    family: Iosevka Mayukai Codepro
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
