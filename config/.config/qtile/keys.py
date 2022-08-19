@@ -58,6 +58,7 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     # General Keybinds
     Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod, "shift"], "t", lazy.spawn("alacritty"), desc="Launch Alacritty"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "e", lazy.shutdown(), desc="Shutdown Qtile"),
