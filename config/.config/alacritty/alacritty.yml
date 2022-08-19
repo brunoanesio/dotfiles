@@ -1,9 +1,5 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
-# Import additional configuration files
-#import:
-#  - /path/to/alacritty.yml
-
 window:
   # Window decorations
   decorations: none
@@ -13,6 +9,11 @@ window:
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
+
+  # Window padding (changes require restart)
+  padding:
+    x: 5
+    y: 5
 
   # Window class (Linux/BSD only):
   #class:
@@ -25,7 +26,7 @@ window:
   gtk_theme_variant: dark
 
   # Background opacity
-  opacity: 1.0
+  opacity: 0.90
 
   # Startup Mode (changes require restart)
   startup_mode: Maximized
@@ -38,58 +39,38 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    # Font family
     family: Iosevka Mayukai Codepro
-
-    # The `style` can be specified to pick a specific face.
     style: Medium
 
   # Bold font face
   bold:
-    # Font family
     family: Iosevka Mayukai Codepro
-
-    # The `style` can be specified to pick a specific face.
     style: Bold
 
   # Italic font face
   italic:
-    # Font family
     family: Iosevka Mayukai Codepro
-
-    # The `style` can be specified to pick a specific face.
-    style: Italic
+    style: Medium Italic
 
   # Bold italic font face
   bold_italic:
-    # Font family
     family: Iosevka Mayukai Codepro
-
-    # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
   size: 14.0
 
-  #offset:
-  #  x: 0
-  #  y: 0
-
-  #glyph_offset:
-  #  x: 0
-  #  y: 0
-
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 cursor:
   # Cursor style
   style:
     # Cursor shape
-    shape: Beam
+    shape: Block
 
     # Cursor blinking state
-    blinking: On
+    blinking: Off
 
   # Vi mode cursor style
   vi_mode_style: None
@@ -106,6 +87,10 @@ cursor:
 
 # Live config reload (changes require restart)
 live_config_reload: true
+
+# keybinds
+key_bindings:
+  - { key: Return, mods: Super, action: SpawnNewInstance }
 
 # colorschemes
 
