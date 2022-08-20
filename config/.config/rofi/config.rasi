@@ -1,6 +1,6 @@
 configuration {
 	modi: "run,drun,window";
-	font: "JetBrainsMono Nerd Font 14";
+	font: "Iosevka Mayukai Codepro Medium 14";
 	show-icons: true; 
 	terminal: "Kitty";
 	icon-theme: "Papirus";
