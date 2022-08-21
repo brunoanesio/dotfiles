@@ -43,8 +43,6 @@ bindkey '^[[B' history-substring-search-down
 # Prompt
 eval "$(starship init zsh)"
 
-# Spicetify path
-export PATH=$HOME/.spicetify:$PATH
 # >>> conda init >>>
 if [ -f "$PWD/.local/share/anaconda3/etc/profile.d/conda.sh" ]; then
     . "$PWD/.local/share/anaconda3/etc/profile.d/conda.sh"
