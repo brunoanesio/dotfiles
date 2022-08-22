@@ -62,6 +62,9 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "e", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key(
+        [mod, "shift"], "x", lazy.spawn("betterlockscreen -l blur"), desc="Lock Screen"
+    ),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # Floating and fullscreen
     Key([mod, "shift"], "f", lazy.window.toggle_floating()),

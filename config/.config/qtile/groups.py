@@ -3,7 +3,17 @@ from libqtile.config import DropDown, Group, Key, Match, ScratchPad
 from libqtile.lazy import lazy
 
 mod = "mod4"
-groups = [Group(i) for i in "123456789"]
+groups = [
+    Group("1", label=""),
+    Group("2", label=""),
+    Group("3", label=""),
+    Group("4", label=""),
+    Group("5", label=""),
+    Group("6", label="ﱘ", matches=[Match(wm_class="spotify")]),
+    Group("7", label="", matches=[Match(wm_class="chatterino")]),
+    Group("8", label=""),
+    Group("9", label=""),
+]
 
 for i in groups:
     keys.extend(
