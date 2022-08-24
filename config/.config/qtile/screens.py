@@ -23,10 +23,6 @@ screens = [
                     hide_unused=False,
                     disable_drag=True,
                 ),
-                widget.CurrentLayoutIcon(
-                    scale=0.65,
-                    padding=2,
-                ),
                 widget.Prompt(
                     decorations=[
                         BorderDecoration(
@@ -36,6 +32,15 @@ screens = [
                 ),
                 widget.WindowName(
                     max_chars=50,
+                ),
+                widget.Spacer(length=10),
+                widget.CurrentLayout(
+                    decorations=[
+                        BorderDecoration(
+                            border_width=[0, 0, 2, 0],
+                            colour=catppuccin_mocha["lavender"],
+                        )
+                    ],
                 ),
                 widget.Spacer(length=10),
                 widget.CPU(
