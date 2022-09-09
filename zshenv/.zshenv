@@ -14,11 +14,6 @@ export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GPG_TTY=$(tty)
 
-# nnn
-export TMPDIR=/tmp
-export NNN_FIFO='/tmp/nnn.fifo'
-export NNN_PLUG='p:preview-tui;'
-
 # Enviroment variables
 # XDG export
 export XDG_DATA_HOME=$HOME/.local/share
