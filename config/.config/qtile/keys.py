@@ -96,4 +96,5 @@ keys = [
     Key([mod], "g", lazy.spawn("kitty -e ranger")),
     Key([], "Print", lazy.spawn("screenshot select")),
     Key([mod], "Print", lazy.spawn("screenshot")),
+    Key([], "XF86Calculator", lazy.spawn("gnome-calculator")),
 ]

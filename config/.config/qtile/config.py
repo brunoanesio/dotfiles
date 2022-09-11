@@ -54,6 +54,7 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
         Match(wm_class="pinentry-gtk-2"),  # GPG key password entry
+        Match(wm_class="gnome-calculator"),  # GNOME Calculator
     ],
     border_focus=catppuccin_mocha["blue"],
     border_width=2,
