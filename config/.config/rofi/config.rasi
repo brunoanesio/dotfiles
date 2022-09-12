@@ -2,7 +2,7 @@ configuration {
 	modi: "run,drun,window";
 	font: "Iosevka Mayukai Codepro Medium 14";
 	show-icons: true; 
-	terminal: "Kitty";
+	terminal: "kitty";
 	icon-theme: "Papirus";
 	drun-display-format: "{icon} {name}";
     location: 0;
