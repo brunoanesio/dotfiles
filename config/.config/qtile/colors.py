@@ -48,6 +48,7 @@ catppuccin_mocha = {
     "bg": "#1e1e2e",
     "sbg": "#f5e0dc",
     "black": "#313244",
+    "mantle": "#181825",
     "gray": "#585b70",
     "red": "#f38ba8",
     "green": "#a6e3a1",

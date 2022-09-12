@@ -4,15 +4,15 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 groups = [
-    Group("1", label=""),
-    Group("2", label="", matches=[Match(wm_class="firefox")]),
-    Group("3", label=""),
-    Group("4", label=""),
-    Group("5", label=""),
-    Group("6", label="ﱘ", matches=[Match(wm_class="spotify")]),
-    Group("7", label="", matches=[Match(wm_class="chatterino")]),
-    Group("8", label=""),
-    Group("9", label=""),
+    Group("1", label=""),
+    Group("2", label="", matches=[Match(wm_class="firefox")]),
+    Group("3", label=""),
+    Group("4", label=""),
+    Group("5", label=""),
+    Group("6", label="", matches=[Match(wm_class="spotify")]),
+    Group("7", label="", matches=[Match(wm_class="chatterino")]),
+    Group("8", label=""),
+    Group("9", label=""),
 ]
 
 for i in groups:
