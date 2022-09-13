@@ -1,6 +1,6 @@
 # colorschemes
 
-color_schemes:
+schemes:
   latte: &latte # Default colors
     primary:
       background: "#EFF1F5" # base
