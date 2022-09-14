@@ -8,4 +8,3 @@ nm-applet &
 picom --experimental-backends -b &
 corectrl &
 keepassxc &
-/usr/bin/emacs --daemon &
