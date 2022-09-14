@@ -42,6 +42,9 @@ groups.append(
         [
             DropDown("term", "kitty", width=0.7, height=0.6, x=0.150, y=0.2),
             DropDown("nvim", "kitty -e nvim", width=0.8, height=0.7, x=0.105, y=0.150),
+            DropDown(
+                "btop", "kitty -e btop", width=0.85, height=0.75, x=0.078, y=0.150
+            ),
         ],
     )
 )
@@ -49,5 +52,6 @@ keys.extend(
     [
         Key([mod, "control"], "1", lazy.group["scratchpad"].dropdown_toggle("term")),
         Key([mod, "control"], "2", lazy.group["scratchpad"].dropdown_toggle("nvim")),
+        Key([mod, "control"], "3", lazy.group["scratchpad"].dropdown_toggle("btop")),
     ]
 )
