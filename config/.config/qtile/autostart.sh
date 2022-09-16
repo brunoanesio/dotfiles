@@ -5,6 +5,6 @@ nitrogen --restore &
 setxkbmap -layout br &
 numlockx &
 nm-applet &
-picom --experimental-backends -b &
+picom -b &
 corectrl &
 keepassxc &
