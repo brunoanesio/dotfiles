@@ -23,7 +23,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 # Cleaning $HOME
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export ZDOTDIR=$HOME/.config/zsh
-export WINEPREFIX="$XDG_DATA_HOME"/wine
+# export WINEPREFIX="$XDG_DATA_HOME"/wine
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 # export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
