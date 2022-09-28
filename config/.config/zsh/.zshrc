@@ -24,7 +24,7 @@ bindkey -e
 autoload -U colors && colors
 
 # Load plugins
-# source $HOME/.config/zsh/plugins/catppuccin-zsh-syntax-highlighting.zsh
+# source $HOME/.config/zsh/plugins/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
