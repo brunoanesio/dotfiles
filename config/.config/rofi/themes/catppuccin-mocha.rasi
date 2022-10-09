@@ -11,7 +11,7 @@
     text-color: @fg-col;
 
     width: 720;
-    font: "Iosevka Mayukai Codepro Medium 14";
+    font: "Iosevka Mayukai Original Medium 14";
 }
 
 element-text, element-icon , mode-switcher {

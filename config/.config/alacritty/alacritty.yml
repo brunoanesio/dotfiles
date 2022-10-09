@@ -39,22 +39,22 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: Iosevka Mayukai Codepro
+    family: Iosevka Mayukai Original
     style: Medium
 
   # Bold font face
   bold:
-    family: Iosevka Mayukai Codepro
+    family: Iosevka Mayukai Original
     style: Bold
 
   # Italic font face
   italic:
-    family: Iosevka Mayukai Codepro
+    family: Iosevka Mayukai Original
     style: Medium Italic
 
   # Bold italic font face
   bold_italic:
-    family: Iosevka Mayukai Codepro
+    family: Iosevka Mayukai Original
     style: Bold Italic
 
   # Point size

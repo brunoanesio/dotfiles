@@ -14,7 +14,7 @@ mod = "mod4"
 terminal = "kitty -1"
 
 widget_defaults = dict(
-    font="Iosevka Mayukai Codepro Medium",
+    font="Iosevka Mayukai Original Medium",
     fontsize=17,
     padding=6,
 )
