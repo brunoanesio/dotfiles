@@ -2,7 +2,6 @@ set font "Iosevka 12"
 map b toggle_statusbar
 map r recolor
 map D set "first-page-column 1:1"
-map <C-d> set "first-page-column 1:2"
 
 set recolor                     "false"
 set recolor-keephue             "false"
