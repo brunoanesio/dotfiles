@@ -11,3 +11,4 @@ config/.config/nvim/plugin
 config/.config/zsh/.zcompdump
 config/.config/kitty/kitty.conf.bak
 config/.config/zsh/.zcompdump.archlinux.73793
+config/.config/zsh/.zsh_history
