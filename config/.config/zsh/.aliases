@@ -17,7 +17,7 @@ alias exa='exa --icons --group-directories-first'
 alias ex='exa -a'
 alias exx='exa -la'
 alias exg='exa -la --git'
-alias tree="ls --tree --level=2"
+alias tree="exa --tree --level=2"
 
 # Git
 alias gs='git status'
