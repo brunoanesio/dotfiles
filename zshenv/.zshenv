@@ -35,11 +35,5 @@ export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
 # export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 # export XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons
 export DOOMDIR="$XDG_CONFIG_HOME"/doom
-# Sway/wayland
-# export SDL_VIDEODRIVER=wayland
-# export _JAVA_AWT_WM_NONREPARENTING=1
-# export QT_QPA_PLATFORM=wayland
-# export XDG_CURRENT_DESKTOP=sway
-# export XDG_SESSION_DESKTOP=sway
 # Rust
 . "/home/frost/.local/share/cargo/env"
