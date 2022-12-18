@@ -12,7 +12,7 @@ Currently I use [qtile](https://github.com/qtile) with [Catppuccin](https://gith
 - Shell: zsh - [Starship](https://github.com/starship/starship)
 - Editor: [Neovim (0.8)](https://github.com/neovim/neovim)
 - File manager: [Ranger](https://github.com/ranger/ranger), Thunar
-- Font: [Iosevka Mayukai](https://github.com/Iosevka-Mayukai/Iosevka-Mayukai)
+- Font: [Iosevka Mayukai](https://github.com/Iosevka-Mayukai/Iosevka-Mayukai)/Iosevka SS07
 - Terminal: [Kitty](https://github.com/kovidgoyal/kitty/)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
