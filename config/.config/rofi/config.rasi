@@ -1,6 +1,6 @@
 configuration {
 	modi: "run,drun";
-	font: "Iosevka Mayukai Original Medium 14";
+	font: "Euclid Circular A 16px";
 	show-icons: true; 
 	terminal: "kitty";
 	icon-theme: "Papirus";
@@ -8,19 +8,18 @@ configuration {
     location: 0;
     hide-scrollbar: true;
     disable-history: false;
-	display-window: "﩯 Janelas";
-	display-drun: " Aplicativos";
+	display-drun: "  Applications";
     display-run: "  Run";
-	display-calc: " Calculadora";
-	display-emoji: " Emojis";
-    sidebar-mode: true;
+	display-calc: "  Calculator";
+	display-emoji: "  Emojis";
+    sidebar-mode: false;
   timeout {
-      action: "kb-cancel";
-      delay:  0;
+    action: "kb-cancel";
+    delay:  0;
   }
   filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
+    directories-first: true;
+    sorting-method:    "name";
   }
 }
-@theme "catppuccin-mocha"
+@theme "cat-mocha"

@@ -1,0 +1,7 @@
+ * {
+    background: #181825;
+    prompt: #1e1e2e;
+    border: #1e1e2e;
+    text: #cdd6f4;
+    select: #1e1e2e;
+ }

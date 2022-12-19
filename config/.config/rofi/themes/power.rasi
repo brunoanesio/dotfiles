@@ -1,0 +1,33 @@
+@theme "cat-mocha"
+* {
+  horizontal-align: 0.5;
+}
+window {
+  width: 13.5em;
+}
+inputbar {
+  children: [ prompt ];
+}
+prompt {
+  padding: 0.5em 0.75em;
+  font: "Euclid Circular A 16px";
+}
+listview {
+  lines: 3;
+  layout: horizontal;
+  margin: 0.5em 0.5em 0.75em;
+}
+element {
+  padding: 1em 0em;
+  margin: 0 0.25em;
+  width: 4em;
+}
+element-icon {
+  enabled: false;
+  size: 0;
+}
+element-text {
+  font: "monospace Bold 21px";
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}

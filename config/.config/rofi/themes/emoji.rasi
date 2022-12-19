@@ -1,0 +1,27 @@
+@theme "cat-mocha"
+listview {
+  columns: 5;
+  lines: 4;
+  layout: vertical;
+  fixed-columns: true;
+  margin: 0.5em 0.25em;
+  flow: horizontal;
+}
+window {
+  width: 30em;
+}
+element {
+  padding: 1em;
+  margin: 0 0.25em;
+}
+element-icon {
+  enabled: false;
+  size: 0;
+}
+element-text {
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
+entry {
+  placeholder: "Search emoji...";
+}
