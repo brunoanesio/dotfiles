@@ -1,5 +1,9 @@
 @theme "cat-mocha"
 @import "./colors.rasi"
+window {
+  width: 35em;
+  height: 20em;
+}
 listview {
   columns: 3;
   lines: 2;
@@ -24,7 +28,7 @@ message {
   margin: 6px 10px;
   border-radius: 8px;
   background-color: @select;
-  padding: 0.75em 1.25em;
+  padding: 0.75em 0.75em;
   vertical-align: 0.5;
 }
 entry {
