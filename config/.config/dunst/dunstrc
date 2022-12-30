@@ -7,7 +7,7 @@
     width = 440
     height = 500
     origin = top-right
-    offset = 10x40
+    offset = 10x20
     scale = 0
     notification_limit = 0
 
@@ -34,7 +34,7 @@
 
     ### Text ###
 
-    font = Iosevka Mayukai Original Medium 14
+    font = Euclid Circular A 13
 
     line_height = 0
     markup = full
