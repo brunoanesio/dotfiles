@@ -2,35 +2,28 @@
 
 ## QT theming
 
-Install qt5ct and Kvantum to proper theme QT apps without installing KDE.
+Install qt5ct,qt6ct and Kvantum to proper theme QT apps without installing KDE.
 
 ## GTK theming
 
 Install lxappearance to theme GTK apps, select icon and cursor themes.
 
-Install adw-gtk3 and adw-gtk-theme from AUR (or manually install them) to theme libadwaita.
-
-_Optional:_ Install Gradience to customize GNOME.
+Install Gradience to theme libadwaita.
 
 **Flatpak**
 
 Override the following flatpak permissions:
 
-_GTK 4_
-
 ```bash
+# GTK 4
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
-```
-
-_GTK 3_
-
-```bash
+# GTK 3
 sudo flatpak override --filesystem=xdg-config/gtk-3.0
 ```
 
 ## Use Kitty as a "global terminal"
 
-Symlink Kitty to xterm so CLI apps use kitty instead of xterm (or gnome-terminal).
+Symlink xterm to Kitty so GUI apps use kitty instead of xterm (or gnome-terminal).
 
 **_Note: This may break something idk_**
 
