@@ -18,6 +18,8 @@ fi
 # zap source
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
+# zfunc
+fpath+=~/.config/zsh/zfunc/
 # Load plugins
 export ZDOTDIR=$HOME/.config/zsh
 plug "zap-zsh/supercharge"
