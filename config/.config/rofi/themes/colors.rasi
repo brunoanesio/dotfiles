@@ -3,5 +3,6 @@
     prompt: #1e1e2e;
     border: #1e1e2e;
     text: #cdd6f4;
+    stext: #45475a;
     select: #1e1e2e;
  }

@@ -33,7 +33,7 @@ entry {
   padding: 0.75em 1.25em;
   cursor: text;
   placeholder: "Search application...";
-  placeholder-color: @text;
+  placeholder-color: @stext;
 }
 listview {
   enabled: true;
