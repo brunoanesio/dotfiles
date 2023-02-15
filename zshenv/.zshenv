@@ -21,6 +21,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 # Cleaning $HOME
+export PYTHONSTARTUP="/etc/python/pythonrc"
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export ZDOTDIR=$HOME/.config/zsh
 # export WINEPREFIX="$XDG_DATA_HOME"/wine
