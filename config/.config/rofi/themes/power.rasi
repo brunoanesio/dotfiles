@@ -27,7 +27,7 @@ element-icon {
   size: 0;
 }
 element-text {
-  font: "monospace Bold 21px";
-  vertical-align: 0.5;
-  horizontal-align: 0.5;
+  font: "Iosevka 21px";
+  vertical-align: 0.445;
+  horizontal-align: 0.445;
 }
