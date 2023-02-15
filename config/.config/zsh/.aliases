@@ -36,36 +36,15 @@ alias gfp='git fetch && git pull'
 alias reboot='systemctl reboot'
 alias shutdown='shutdown -h now'
 
-# grep, rg
+# Misc
 alias grep='grep -i --color=auto'
 alias rg='rg -i'
-
-# nvim
 alias v='nvim'
-
-# emacs
 alias emacs='emacsclient -c -a 'emacs''
-
-# cd
 alias ..='cd ..'
-
-# wget
-alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts '
-
-# rm
 # alias rm='rm -I '
-
-# lazygit
 alias lg='lazygit'
-
-# helix
 alias hx='helix'
-
-# nnn
 alias n='nnn'
-
-# yarn
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
-
-# kitty
 alias kitten='kitty +kitten '
