@@ -18,7 +18,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
-	window_background_opacity = 0.6,
+	window_background_opacity = 0.75,
 	text_background_opacity = 1.0,
 	enable_wayland = true,
 	warn_about_missing_glyphs = false,
