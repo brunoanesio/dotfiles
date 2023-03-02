@@ -1,7 +1,7 @@
 configuration {
   modi: "drun,emoji,calc";
   font: "Euclid Circular A 16px";
-  show-icons: false; 
+  show-icons: true; 
   terminal: "kitty";
   icon-theme: "Papirus";
   drun-display-format: "{icon} {name}";

@@ -10,7 +10,7 @@ window {
   location: center;
   anchor: center;
   fullscreen: false;
-  width: 21em;
+  width: 24em;
   x-offset: 0px;
   y-offset: 0px;
   enabled: true;
@@ -57,7 +57,7 @@ element {
   orientation: horizontal;
 }
 element-icon {
-  size: 21px;
+  size: 24px;
 }
 element normal.normal {
   background-color: inherit;

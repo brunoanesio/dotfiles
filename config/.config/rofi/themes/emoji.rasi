@@ -8,7 +8,7 @@ listview {
   flow: horizontal;
 }
 window {
-  width: 19em;
+  width: 24em;
 }
 element {
   padding: 1em;
