@@ -8,8 +8,8 @@ source $HOME/.config/zsh/.aliases
 eval "$(starship init zsh)"
 
 # >>> conda init >>>
-if [ -f "$PWD/.local/share/anaconda3/etc/profile.d/conda.sh" ]; then
-    . "$PWD/.local/share/anaconda3/etc/profile.d/conda.sh"
+if [ -f "$PWD/.local/share/miniconda3/etc/profile.d/conda.sh" ]; then
+    . "$PWD/.local/share/miniconda3/etc/profile.d/conda.sh"
 else
     \export PATH="$PWD/.local/share/anaconda3/bin/conda:$PATH"
 fi
@@ -27,6 +27,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/completions"
 plug "zap-zsh/vim"
+plug "esc/conda-zsh-completion"
 
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
