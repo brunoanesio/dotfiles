@@ -4,10 +4,10 @@
     follow = mouse
 
     ### Geometry ###
-    width = 440
-    height = 500
+    width = 500
+    height = 400
     origin = top-right
-    offset = 10x20
+    offset = 5x5
     scale = 0
     notification_limit = 0
 
@@ -27,14 +27,14 @@
     text_icon_padding = 20
     frame_width = 2
     frame_color = "#89B4FA"
-    gap_size = 4
+    gap_size = 6
     separator_color = frame
     sort = yes
     idle_threshold = 120
 
     ### Text ###
 
-    font = Euclid Circular A 13
+    font = Jost 14
 
     line_height = 0
     markup = full

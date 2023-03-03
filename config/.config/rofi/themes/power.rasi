@@ -6,7 +6,7 @@ window {
   width: 13.5em;
 }
 inputbar {
-  children: [ prompt ];
+  enabled: false;
 }
 prompt {
   padding: 0.5em 0.75em;
