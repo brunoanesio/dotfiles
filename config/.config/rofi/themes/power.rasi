@@ -18,7 +18,7 @@ listview {
   margin: 0.5em 0.5em 0.75em;
 }
 element {
-  padding: 1em 0em;
+  padding: 1em 0.5em;
   margin: 0 0.25em;
   width: 4em;
 }
@@ -27,7 +27,7 @@ element-icon {
   size: 0;
 }
 element-text {
-  font: "Iosevka 21px";
+  font: "monospace 21";
   vertical-align: 0.445;
   horizontal-align: 0.445;
 }
