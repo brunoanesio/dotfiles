@@ -27,7 +27,7 @@ element-icon {
   size: 0;
 }
 element-text {
-  font: "monospace 21";
+  font: "monospace 21px";
   vertical-align: 0.445;
   horizontal-align: 0.445;
 }
