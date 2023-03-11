@@ -1,4 +1,4 @@
-set font "Iosevka 12"
+set font "Jost 14"
 map b toggle_statusbar
 map r recolor
 map D set "first-page-column 1:1"
