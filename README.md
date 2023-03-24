@@ -2,6 +2,8 @@
 
 Configuration files for my linux setup.
 
+![](https://raw.githubusercontent.com/brunoanesio/hyprland-config/main/screenshot/hyprland.png)
+
 ## About
 
 - Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland), [config](https://github.com/brunoanesio/hyprland-config)
