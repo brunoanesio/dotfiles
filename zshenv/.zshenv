@@ -5,7 +5,7 @@ export EDITOR=nvim
 export DIFFPROG="nvim -d"
 
 # Path
-export PATH=$HOME/.spicetify:$HOME/.local/share/npm/bin:$HOME/.emacs.d/bin:$HOME/.local/share/cargo/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/.config/emacs/bin:$HOME/.spicetify:$HOME/.local/share/npm/bin:$HOME/.local/share/cargo/bin:$HOME/.local/bin:$PATH
 
 # Pfetch
 export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory"
