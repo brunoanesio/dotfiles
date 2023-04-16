@@ -204,4 +204,8 @@ _swww__query_commands() {
     _describe -t commands 'swww query commands' commands "$@"
 }
 
-_swww "$@"
+if [ "$funcstack[1]" = "_swww" ]; then
+    _swww "$@"
+else
+    compdef _swww swww
+fi
