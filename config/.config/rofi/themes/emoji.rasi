@@ -1,6 +1,6 @@
 @theme "cat-mocha"
 listview {
-  columns: 8;
+  columns: 4;
   lines: 4;
   layout: vertical;
   fixed-columns: true;
