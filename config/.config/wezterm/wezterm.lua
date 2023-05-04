@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 return {
 	front_end = "OpenGL",
-	font = wezterm.font("Iosevka Mayukai Original", { weight = "Medium" }),
+	font = wezterm.font("Iosevka Term Nerd Font", { weight = "Medium" }),
 	font_size = 14,
 	line_height = 1.0,
 	underline_position = -4,

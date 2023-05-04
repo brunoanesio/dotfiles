@@ -33,15 +33,15 @@ alias gf='git fetch'
 alias gfp='git fetch && git pull'
 
 # System
-alias reboot='systemctl reboot'
-alias shutdown='shutdown -h now'
+# alias reboot='systemctl reboot'
+# alias shutdown='systemctl poweroff'
 
 # Misc
 alias grep='grep -i --color=auto'
 alias rg='rg -i'
 alias v='nvim'
 alias emacs='emacsclient -c -a 'emacs''
-alias ..='cd ..'
+# alias ..='cd ..'
 # alias rm='rm -I '
 alias lg='lazygit'
 alias hx='helix'
