@@ -6,15 +6,15 @@ Configuration files for my linux setup.
 
 ## About
 
-- Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland), [config](https://github.com/brunoanesio/hyprland-config)
-- Bar: [Waybar](https://github.com/Alexays/Waybar)
+- Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland), [config here](https://github.com/brunoanesio/hyprland-config)
+- Bar: [eww](https://github.com/elkowar/eww)
 - Shell: zsh - prompt: [Starship](https://github.com/starship/starship)
-- Editor: [Neovim (0.8)](https://github.com/neovim/neovim), [config](https://github.com/brunoanesio/nvim-config)
+- Editor: [Neovim](https://github.com/neovim/neovim), [config here](https://github.com/brunoanesio/nvim-config)
 - File manager: [Thunar](https://gitlab.xfce.org/xfce/thunar)
-- Font: Iosevka (SS07 variant)
+- Font: Iosevka
 - Terminal: [Kitty](https://github.com/kovidgoyal/kitty/)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
-- Launcher: [rofi](https://github.com/davatorium/rofi)
+- Launcher: [anyrun](https://github.com/Kirottu/anyrun)
 - GTK theme: [catppuccin](https://github.com/catppuccin/gtk)
 - Document Viewer: [zathura](https://git.pwmt.org/pwmt/zathura)
 
@@ -24,12 +24,14 @@ Configuration files for my linux setup.
 
 ```bash
 # Packages avaiable on Arch repositories
-pacman -S thunar thunar-volman thunar-archive-plugin lxappearance-gtk3 playerctl tumbler dunst polkit-gnome pavucontrol network-manager-applet zathura stow starship zsh neovim kitty
+pacman -S thunar thunar-volman thunar-archive-plugin tumbler playerctl dunst polkit-kde-agent \
+pavucontrol zathura starship zsh neovim kitty hyprland
 ```
 
 ```bash
 # Packages avaiable through the AUR
-paru -S hyprland-git hyprpicker-git grimblast-git rofi-lbonn-wayland swaylock-effects waybar-hyprland-git
+paru -S hyprpicker-git grimblast-git rofi-lbonn-wayland wlogout jaq anyrun-git swww \
+eww-wayland xdg-desktop-portal-hyprland-git
 ```
 
 **Configuration files**
