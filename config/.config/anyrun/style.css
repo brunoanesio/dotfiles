@@ -1,5 +1,5 @@
 * {
-  transition: 200ms ease-out;
+  transition: 200ms ease;
   font-family: Lexend;
   font-size: 16px;
 }
@@ -17,7 +17,8 @@
   padding: 3px;
   border-radius: 6px;
 }
-#entry {
+#entry,
+#plugin:hover {
   border-radius: 8px;
 }
 box#main {
