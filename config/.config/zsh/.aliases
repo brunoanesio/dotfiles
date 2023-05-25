@@ -1,11 +1,11 @@
 # Arch
-alias upgrade='sudo pacman -Syu'
+#alias upgrade='sudo pacman -Syu'
 alias info='pacman -Qi '
 alias aur='pacman -Qm'
 alias aurup='paru -Sua'
-alias pacins='sudo pacman -S '
-alias pacrem='sudo pacman -R '
-alias pacsea='pacman -Ss '
+#alias pacins='sudo pacman -S '
+#alias pacrem='sudo pacman -R '
+#alias pacsea='pacman -Ss '
 
 # ls
 alias ls='ls --color=auto'
