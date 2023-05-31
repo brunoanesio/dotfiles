@@ -1,9 +1,9 @@
-set font "Jost 14"
+set font "Lexend 14"
 map b toggle_statusbar
 map r recolor
 map D set "first-page-column 1:1"
 
-set recolor                     "false"
-set recolor-keephue             "false"
+set recolor "false"
+set recolor-keephue "false"
 
 include catppuccin-mocha
