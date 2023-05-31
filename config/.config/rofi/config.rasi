@@ -1,6 +1,6 @@
 configuration {
   modi: "drun,emoji,calc";
-  font: "Euclid Circular A 16px";
+  font: "Lexend 16px";
   show-icons: true; 
   terminal: "kitty";
   icon-theme: "Papirus";

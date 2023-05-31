@@ -10,7 +10,7 @@ inputbar {
 }
 prompt {
   padding: 0.5em 0.75em;
-  font: "Euclid Circular A 16px";
+  font: "Lexend 16px";
 }
 listview {
   lines: 3;
