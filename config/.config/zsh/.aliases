@@ -1,6 +1,6 @@
 # Arch
 #alias upgrade='sudo pacman -Syu'
-alias info='pacman -Qi '
+alias pinfo='pacman -Qi '
 alias aur='pacman -Qm'
 #alias aurup='paru -Sua'
 #alias pacins='sudo pacman -S '
