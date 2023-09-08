@@ -13,7 +13,7 @@ alias la='ls -a'
 alias ll='ls -lah'
 
 # exa
-alias exa='exa --icons --group-directories-first'
+alias exa='eza --icons --group-directories-first'
 alias ex='exa -a'
 alias exx='exa -la'
 alias exg='exa -la --git'
