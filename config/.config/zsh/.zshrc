@@ -8,11 +8,11 @@ source $HOME/.config/zsh/.aliases
 eval "$(starship init zsh)"
 
 # >>> conda init >>>
-if [ -f "$PWD/.local/share/miniconda3/etc/profile.d/conda.sh" ]; then
-    . "$PWD/.local/share/miniconda3/etc/profile.d/conda.sh"
-else
-    \export PATH="$PWD/.local/share/anaconda3/bin/conda:$PATH"
-fi
+# if [ -f "$PWD/.local/share/miniconda3/etc/profile.d/conda.sh" ]; then
+#     . "$PWD/.local/share/miniconda3/etc/profile.d/conda.sh"
+# else
+#     \export PATH="$PWD/.local/share/miniconda3/bin/conda:$PATH"
+# fi
 # <<< conda init <<<
 
 # zap source
