@@ -42,4 +42,4 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 # antidot
-eval "$(antidot init)"
+#eval "$(antidot init)"
