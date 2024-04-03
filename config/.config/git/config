@@ -3,6 +3,7 @@
 [user]
 	email = 69819132+brunoanesio@users.noreply.github.com
 	name = Bruno Anesio
+	signingkey = 751694BF0684636D
 [core]
 	autocrlf = input
 [credential]
