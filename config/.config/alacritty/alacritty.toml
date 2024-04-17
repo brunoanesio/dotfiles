@@ -1,5 +1,8 @@
 import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
+[env]
+TERM = "xterm-256color"
+
 [font]
 size = 14
 
