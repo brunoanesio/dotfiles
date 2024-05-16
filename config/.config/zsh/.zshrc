@@ -1,3 +1,5 @@
+# gpg
+export GPG_TTY=$TTY
 # Enable colors
 autoload -U colors && colors
 

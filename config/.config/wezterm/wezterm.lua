@@ -1,8 +1,8 @@
 local wezterm = require("wezterm")
 
 local config = {
-  front_end = "OpenGL",
-  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" }),
+  front_end = "WebGpu",
+  font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" }),
   font_size = 14,
   line_height = 1.0,
   underline_position = -4,
