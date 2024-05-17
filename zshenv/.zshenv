@@ -10,11 +10,6 @@ export PATH=$HOME/.config/emacs/bin:$HOME/.spicetify:$HOME/.local/share/npm/bin:
 # Pfetch
 export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory"
 
-# gpg
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
-export GPG_TTY=$(tty)
-
 # Enviroment variables
 # XDG export
 export XDG_DATA_HOME=$HOME/.local/share
