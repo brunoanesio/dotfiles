@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 
 local config = {
+  default_prog = { "/usr/bin/fish" },
   front_end = "WebGpu",
   font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" }),
   font_size = 14,
@@ -21,7 +22,7 @@ local config = {
   window_background_opacity = 0.90,
   text_background_opacity = 1.0,
   initial_cols = 170,
-  initial_rows = 30,
+  initial_rows = 32,
   enable_wayland = true,
   warn_about_missing_glyphs = false,
 }

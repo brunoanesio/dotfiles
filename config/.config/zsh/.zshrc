@@ -1,5 +1,7 @@
-# gpg
+# gpg and ssh
 export GPG_TTY=$TTY
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # Enable colors
 autoload -U colors && colors
 
@@ -43,5 +45,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
+# zoxide
+eval "$(zoxide init --cmd cd zsh)"
 # antidot
 #eval "$(antidot init)"
