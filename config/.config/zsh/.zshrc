@@ -27,17 +27,20 @@ fpath+=~/.config/zsh/zfunc/
 # Load plugins
 export ZDOTDIR=$HOME/.config/zsh
 plug "zap-zsh/supercharge"
-plug "zsh-users/zsh-syntax-highlighting"
+plug "zdharma-continuum/fast-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
+plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/completions"
 plug "zap-zsh/vim"
+# plug "marlonrichert/zsh-autocomplete"
 
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
-
-# Bindings
+# Plugins config
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+fast-theme XDG:catppuccin-mocha
 
 # fzf theme
 export FZF_DEFAULT_OPTS=" \
