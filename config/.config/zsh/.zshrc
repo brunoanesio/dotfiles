@@ -32,7 +32,6 @@ plug "zsh-users/zsh-history-substring-search"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/completions"
 plug "zap-zsh/vim"
-# plug "marlonrichert/zsh-autocomplete"
 
 # Plugins config
 bindkey '^[[A' history-substring-search-up
@@ -40,7 +39,7 @@ bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
-fast-theme XDG:catppuccin-mocha
+# fast-theme XDG:catppuccin-mocha
 
 # fzf theme
 export FZF_DEFAULT_OPTS=" \
@@ -50,5 +49,3 @@ export FZF_DEFAULT_OPTS=" \
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
-# antidot
-#eval "$(antidot init)"
