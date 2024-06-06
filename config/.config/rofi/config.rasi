@@ -1,5 +1,5 @@
 configuration {
-  modi: "drun,emoji";
+  modi: "drun";
   font: "Lexend 16px";
   show-icons: true;
   terminal: "kitty";
