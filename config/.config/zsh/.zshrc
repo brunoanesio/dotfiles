@@ -1,7 +1,7 @@
 # gpg and ssh
 export GPG_TTY=$TTY
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # Enable colors
 autoload -U colors && colors
 
@@ -27,7 +27,8 @@ fpath+=~/.config/zsh/zfunc/
 # Load plugins
 export ZDOTDIR=$HOME/.config/zsh
 plug "zap-zsh/supercharge"
-plug "zdharma-continuum/fast-syntax-highlighting"
+# plug "zdharma-continuum/fast-syntax-highlighting"
+plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/completions"
