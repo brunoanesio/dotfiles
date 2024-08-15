@@ -1,7 +1,6 @@
 # gpg and ssh
 export GPG_TTY=$TTY
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # Enable colors
 autoload -U colors && colors
 
@@ -40,7 +39,6 @@ bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
-# fast-theme XDG:catppuccin-mocha
 
 # fzf theme
 export FZF_DEFAULT_OPTS=" \
@@ -50,3 +48,8 @@ export FZF_DEFAULT_OPTS=" \
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# fastfetch
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
