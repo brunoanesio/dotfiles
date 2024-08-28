@@ -14,3 +14,7 @@ config/.config/zsh/.zcompdump.archlinux.73793
 config/.config/zsh/.zsh_history
 config/.config/zsh/.zcompdump.archlinux.36238
 **Session.vim
+config/zsh/.zcompdump
+config/zsh/.zsh_history
+zsh/.zsh_history
+zsh/.zcompdump

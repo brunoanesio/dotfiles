@@ -1,0 +1,41 @@
+# vim: ft=kitty
+# Font
+font_family      Iosevka SS07 Medium
+bold_font        Iosevka SS07 Bold
+italic_font      Iosevka SS07 Medium Italic
+bold_italic_font Iosevka SS07 Bold Italic
+font_size 14.0
+adjust_line_height  1
+adjust_column_width 1
+modify_font underline_thickness 150%
+modify_font underline_position 10
+undercurl_style thick-sparse
+
+# Window
+background_opacity 1.0
+#background_blur 12
+dynamic_background_opacity yes
+window_padding_width 4
+hide_window_decorations no
+confirm_os_window_close 0
+remember_window_size yes
+#linux_display_server x11
+# Cursor
+cursor_shape beam
+# Bell
+enable_audio_bell no
+# Editor
+editor nvim
+# Tabs
+tab_bar_edge bottom
+tab_bar_style powerline
+tab_powerline_style slanted
+active_tab_font_style bold
+inactive_tab_font_style normal
+tab_title_template {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+#tab_bar_min_tabs 1
+
+# BEGIN_KITTY_THEME
+# Adwaita dark
+include current-theme.conf
+# END_KITTY_THEME

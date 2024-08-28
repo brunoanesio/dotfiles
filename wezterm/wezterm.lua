@@ -1,9 +1,9 @@
 local wezterm = require("wezterm")
 
 local config = {
-  default_prog = { "/usr/bin/fish" },
+  default_prog = { "/usr/bin/zsh" },
   front_end = "WebGpu",
-  font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" }),
+  font = wezterm.font("Iosevka SS07", { weight = "Medium" }),
   font_size = 14,
   line_height = 1.0,
   underline_position = -4,
@@ -19,7 +19,7 @@ local config = {
     top = 0,
     bottom = 0,
   },
-  window_background_opacity = 0.90,
+  window_background_opacity = 1.0,
   text_background_opacity = 1.0,
   initial_cols = 170,
   initial_rows = 32,
