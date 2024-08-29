@@ -34,7 +34,7 @@ autoload -U colors && colors
 fpath+=~/.config/zsh/zfunc/
 
 # Prompt
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/prompt.toml)"
 
 # zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"

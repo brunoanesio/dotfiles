@@ -19,7 +19,7 @@ symlinkconfig() {
 symlinkconfig kitty
 symlinkconfig alacritty
 symlinkconfig zsh
-symlinkconfig starship.toml
+symlinkconfig ohmyposh
 symlinkconfig hypr
 symlinkconfig waybar
 symlinkconfig git
