@@ -9,13 +9,6 @@ symlinkconfig() {
     # Check if the target already exists
     if [ -e "$target" ]; then
         echo "$target already exists."
-
-        # Optionally, check if it is a symlink
-        if [ -L "$target" ]; then
-            echo "$target is already a symlink."
-        else
-            echo "$target exists but is not a symlink."
-        fi
     else
         # Create the symlink if the target does not exist
         ln -s "$source" "$target"
@@ -27,14 +20,15 @@ symlinkconfig kitty
 symlinkconfig alacritty
 symlinkconfig zsh
 symlinkconfig starship.toml
-symlinkconfig scripts
 symlinkconfig hypr
 symlinkconfig waybar
 symlinkconfig git
+symlinkconfig bat
 
 # zshenv symlink
-if [ -e "$HOME/.zshenv" ] || [ -L "$HOME/.zshenv" ]; then
-    echo "$HOME/.zshenv already exists."
-else
+if [ ! -e "$HOME/.zshenv" ] || [ ! -L "$HOME/.zshenv" ]; then
     ln -s "$PWD/zshenv/.zshenv" "$HOME/.zshenv"
 fi
+
+# symlink scripts
+ln -s "$PWD/scripts/killwindow.sh" "$HOME/.local/bin/killwindow"
