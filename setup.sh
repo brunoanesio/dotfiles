@@ -19,11 +19,13 @@ symlinkconfig() {
 symlinkconfig kitty
 symlinkconfig alacritty
 symlinkconfig zsh
-symlinkconfig ohmyposh
+# symlinkconfig ohmyposh
+symlinkconfig starship.toml
 symlinkconfig hypr
 symlinkconfig waybar
 symlinkconfig git
 symlinkconfig bat
+symlinkconfig dunst
 
 # zshenv symlink
 if [ ! -e "$HOME/.zshenv" ] || [ ! -L "$HOME/.zshenv" ]; then
