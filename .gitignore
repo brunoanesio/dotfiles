@@ -18,3 +18,4 @@ config/zsh/.zcompdump
 config/zsh/.zsh_history
 zsh/.zsh_history
 zsh/.zcompdump
+zsh/.zcompdump*
