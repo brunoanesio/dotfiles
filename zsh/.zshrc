@@ -1,4 +1,5 @@
 # Exports
+export STARSHIP_CONFIG="$HOME"/.config/starship/starship.toml
 export GPG_TTY=$TTY
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export ZDOTDIR=$HOME/.config/zsh
