@@ -12,7 +12,6 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export ZDOTDIR=$HOME/.config/zsh
 export EDITOR=nvim
 export DIFFPROG="nvim -d"
-export PATH=$HOME/.spicetify:$HOME/.local/bin/:$PATH
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
@@ -29,8 +28,8 @@ export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export DOOMDIR="$XDG_CONFIG_HOME"/doom
-# Rust
 # . "/home/frost/.local/share/cargo/env"
+export PATH=$(go env GOPATH)/bin:$HOME/.spicetify/:$HOME/.local/bin/:$PATH
 
 # Aliases
 source $HOME/.config/zsh/aliases
