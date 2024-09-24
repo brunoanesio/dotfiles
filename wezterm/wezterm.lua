@@ -3,8 +3,8 @@ local wezterm = require("wezterm")
 local config = {
   default_prog = { "/usr/bin/zsh" },
   front_end = "WebGpu",
-  font = wezterm.font("Iosevka SS07", { weight = "Medium" }),
-  font_size = 14,
+  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" }),
+  font_size = 13,
   line_height = 1.0,
   underline_position = -4,
   underline_thickness = 2,
@@ -23,7 +23,7 @@ local config = {
   text_background_opacity = 1.0,
   initial_cols = 170,
   initial_rows = 32,
-  enable_wayland = true,
+  enable_wayland = false,
   warn_about_missing_glyphs = false,
 }
 
