@@ -29,7 +29,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export DOOMDIR="$XDG_CONFIG_HOME"/doom
 # . "/home/frost/.local/share/cargo/env"
-export PATH=$(go env GOPATH)/bin:$HOME/.spicetify/:$HOME/.local/bin/:$PATH
+export PATH=$(go env GOPATH)/bin:$HOME/.spicetify:$HOME/.local/bin:$PATH
 
 # Aliases
 source $HOME/.config/zsh/aliases
