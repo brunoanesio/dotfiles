@@ -5,7 +5,7 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-      transparent_background = true,
+      transparent_background = false,
       default_integrations = true,
       integrations = {
         cmp = true,

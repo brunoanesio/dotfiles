@@ -8,11 +8,6 @@ return {
   opts = {
     indent = {
       char = "▎",
-      highlight = { "IblChar" },
-    },
-    scope = {
-      highlight = { "IblScopeChar" },
-      -- highlight = { "Function", "Label" },
     },
   },
 }

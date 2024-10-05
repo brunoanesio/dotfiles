@@ -85,6 +85,13 @@ return {
   },
 
   {
+    "echasnovski/mini.statusline",
+    version = false,
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
     "echasnovski/mini.files",
     version = false,
     opts = {},

@@ -21,6 +21,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     "hrsh7th/cmp-nvim-lsp",
+    { "j-hui/fidget.nvim", opts = { notification = { window = { winblend = 0 } } } },
   },
   config = function()
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -36,7 +37,6 @@ return {
         vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
         vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
         vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-        -- vim.keymap.set("n", "<leader>lr", function () require "nvchad.lsp.renamer"() end, opts)
         vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
         vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>")
         vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>")

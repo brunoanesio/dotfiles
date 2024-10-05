@@ -19,3 +19,4 @@ config/zsh/.zsh_history
 zsh/.zsh_history
 zsh/.zcompdump
 zsh/.zcompdump*
+nvim/lazy-lock.json

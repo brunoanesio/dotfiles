@@ -8,6 +8,7 @@ return {
       css = { "prettierd" },
       json = { "prettierd" },
       jsonc = { "prettierd" },
+      yaml = { "prettierd" },
       go = { "goimports", "gofmt", "golines" },
       gomod = { "goimports", "gofmt" },
       gowork = { "goimports", "gofmt" },

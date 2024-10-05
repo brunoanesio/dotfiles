@@ -72,9 +72,19 @@ return {
           end,
         },
         experimental = { ghost_text = true },
+        window = {
+          completion = cmp.config.window.bordered {
+            scrollbar = true,
+            border = "single",
+            col_offset = -1,
+            side_padding = 0,
+          },
+          documentation = cmp.config.window.bordered {
+            scrollbar = true,
+            border = "single",
+          },
+        },
       }
-
-      options = vim.tbl_deep_extend("force", options, require "nvchad.cmp")
       cmp.setup(options)
     end,
   },
