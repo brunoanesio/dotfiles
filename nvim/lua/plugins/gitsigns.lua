@@ -2,6 +2,7 @@ return {
   "lewis6991/gitsigns.nvim",
   event = "BufReadPost",
   config = function()
+    dofile(vim.g.base46_cache .. "git")
     require("gitsigns").setup {
       current_line_blame = false,
       preview_config = {

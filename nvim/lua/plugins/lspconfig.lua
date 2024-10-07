@@ -17,13 +17,18 @@ return {
           },
         },
       },
+      config = function(_, opts)
+        dofile(vim.g.base46_cache .. "mason")
+        require("mason").setup(opts)
+      end,
     },
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     "hrsh7th/cmp-nvim-lsp",
-    { "j-hui/fidget.nvim", opts = { notification = { window = { winblend = 0 } } } },
+    -- { "j-hui/fidget.nvim", opts = { notification = { window = { winblend = 0 } } } },
   },
   config = function()
+    dofile(vim.g.base46_cache .. "lsp")
     vim.api.nvim_create_autocmd("LspAttach", {
       desc = "LSP actions",
       callback = function(event)

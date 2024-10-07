@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = "BufReadPre",
+  event = "BufReadPost",
   build = ":TSUpdate",
   cmd = { "TSUpdate", "TSInstall" },
   main = "nvim-treesitter.configs",
@@ -19,4 +19,8 @@ return {
       enable_autocmd = false,
     },
   },
+  config = function(_, opts)
+    dofile(vim.g.base46_cache .. "treesitter")
+    require("nvim-treesitter.configs").setup(opts)
+  end,
 }

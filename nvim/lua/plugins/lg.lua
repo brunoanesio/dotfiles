@@ -5,5 +5,4 @@ return {
     { "<leader>lg", "<cmd>LazyGit<CR>", desc = "LazyGit" },
   },
   dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {},
 }

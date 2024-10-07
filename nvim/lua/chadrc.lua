@@ -1,5 +1,6 @@
 local M = {}
 
+---@type ChadrcConfig
 M.base46 = {
   theme = "catppuccin",
   transparency = false,
@@ -11,7 +12,7 @@ M.ui = {
   cmp = {
     -- icons_left = true,
     lspkind_text = true,
-    style = "atom_colored",
+    style = "default",
   },
 }
 

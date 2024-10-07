@@ -29,6 +29,7 @@ return {
     dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-path", "saadparwaiz1/cmp_luasnip", "hrsh7th/cmp-buffer" },
     event = "InsertEnter",
     config = function()
+      dofile(vim.g.base46_cache .. "cmp")
       local cmp = require "cmp"
       local luasnip = require "luasnip"
 
@@ -72,19 +73,20 @@ return {
           end,
         },
         experimental = { ghost_text = true },
-        window = {
-          completion = cmp.config.window.bordered {
-            scrollbar = true,
-            border = "single",
-            col_offset = -1,
-            side_padding = 0,
-          },
-          documentation = cmp.config.window.bordered {
-            scrollbar = true,
-            border = "single",
-          },
-        },
+        -- window = {
+        --   completion = cmp.config.window.bordered {
+        --     scrollbar = true,
+        --     border = "single",
+        --     col_offset = -1,
+        --     side_padding = 0,
+        --   },
+        --   documentation = cmp.config.window.bordered {
+        --     scrollbar = true,
+        --     border = "single",
+        --   },
+        -- },
       }
+      options = vim.tbl_deep_extend("force", options, require "nvchad.cmp")
       cmp.setup(options)
     end,
   },

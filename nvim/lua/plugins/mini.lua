@@ -77,19 +77,19 @@ return {
     },
   },
 
-  {
-    "echasnovski/mini.icons",
-    version = false,
-    event = "VeryLazy",
-    opts = {},
-  },
+  -- {
+  --   "echasnovski/mini.icons",
+  --   version = false,
+  --   event = "VeryLazy",
+  --   opts = {},
+  -- },
 
-  {
-    "echasnovski/mini.statusline",
-    version = false,
-    event = "VeryLazy",
-    opts = {},
-  },
+  -- {
+  --   "echasnovski/mini.statusline",
+  --   version = false,
+  --   event = "VeryLazy",
+  --   opts = {},
+  -- },
 
   {
     "echasnovski/mini.files",
