@@ -1,0 +1,142 @@
+#!/bin/sh
+
+# autostart
+/usr/lib/polkit-kde-authentication-agent-1 &
+riverctl spawn yambar
+riverctl spawn swww-daemon
+riverctl spawn swaync
+
+riverctl map normal Super T spawn "kitty -1"
+riverctl map normal Super D spawn "rofi -show drun"
+riverctl map normal Super E spawn "thunar"
+riverctl map normal Super B spawn "MOZ_ENABLE_WAYLAND=1 firefox"
+riverctl map normal Super V spawn "swaync-client -t"
+
+riverctl map normal Super Q close
+riverctl map normal Super+Shift E exit
+
+# Super+J and Super+K to focus the next/previous view in the layout stack
+riverctl map normal Super L focus-view next
+riverctl map normal Super H focus-view previous
+
+# Super+Return to bump the focused view to the top of the layout stack
+riverctl map normal Super Return zoom
+
+riverctl map normal Super+Control H send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Super+Control L send-layout-cmd rivertile "main-ratio +0.05"
+
+# Super+Alt+{H,J,K,L} to move views
+riverctl map normal Super+Alt H move left 100
+riverctl map normal Super+Alt J move down 100
+riverctl map normal Super+Alt K move up 100
+riverctl map normal Super+Alt L move right 100
+
+# Super+Alt+Control+{H,J,K,L} to snap views to screen edges
+riverctl map normal Super+Alt+Control H snap left
+riverctl map normal Super+Alt+Control J snap down
+riverctl map normal Super+Alt+Control K snap up
+riverctl map normal Super+Alt+Control L snap right
+
+# Super+Alt+Shift+{H,J,K,L} to resize views
+riverctl map normal Super+Alt+Shift H resize horizontal -100
+riverctl map normal Super+Alt+Shift J resize vertical 100
+riverctl map normal Super+Alt+Shift K resize vertical -100
+riverctl map normal Super+Alt+Shift L resize horizontal 100
+
+# Super + Left Mouse Button to move views
+riverctl map-pointer normal Super BTN_LEFT move-view
+
+# Super + Right Mouse Button to resize views
+riverctl map-pointer normal Super BTN_RIGHT resize-view
+
+# Super + Middle Mouse Button to toggle float
+riverctl map-pointer normal Super BTN_MIDDLE toggle-float
+
+for i in $(seq 1 9); do
+  tags=$((1 << ($i - 1)))
+
+  # Super+[1-9] to focus tag [0-8]
+  riverctl map normal Super $i set-focused-tags $tags
+
+  # Super+Shift+[1-9] to tag focused view with tag [0-8]
+  riverctl map normal Super+Shift $i set-view-tags $tags
+
+  # Super+Control+[1-9] to toggle focus of tag [0-8]
+  riverctl map normal Super+Control $i toggle-focused-tags $tags
+
+  # Super+Shift+Control+[1-9] to toggle tag [0-8] of focused view
+  riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
+done
+
+# Scratchpad
+scratch_tag=$((1 << 20))
+riverctl map normal Super P toggle-focused-tags ${scratch_tag} # toggle the scratchpad
+riverctl map normal Super+Shift P set-view-tags ${scratch_tag} # send windows to the scratchpad
+all_but_scratch_tag=$((((1 << 32) - 1) ^ $scratch_tag))
+riverctl spawn-tagmask ${all_but_scratch_tag}
+
+# Super+Space to toggle float
+riverctl map normal Super Space toggle-float
+
+# Super+F to toggle fullscreen
+riverctl map normal Super F toggle-fullscreen
+
+# Super+{Up,Right,Down,Left} to change layout orientation
+riverctl map normal Super+Shift K send-layout-cmd rivertile "main-location top"
+riverctl map normal Super+Shift H send-layout-cmd rivertile "main-location right"
+riverctl map normal Super+Shift J send-layout-cmd rivertile "main-location bottom"
+riverctl map normal Super+Shift L send-layout-cmd rivertile "main-location left"
+
+# Declare a passthrough mode. This mode has only a single mapping to return to
+# normal mode. This makes it useful for testing a nested wayland compositor
+riverctl declare-mode passthrough
+
+# Super+F11 to enter passthrough mode
+riverctl map normal Super F11 enter-mode passthrough
+
+# Super+F11 to return to normal mode
+riverctl map passthrough Super F11 enter-mode normal
+
+# Various media key mapping examples for both normal and locked mode which do
+# not have a modifier
+for mode in normal locked; do
+  riverctl map $mode None Print spawn 'grimblast --notify copysave area'
+
+  riverctl map $mode None XF86AudioRaiseVolume spawn 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+  riverctl map $mode None XF86AudioLowerVolume spawn 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+  riverctl map $mode None XF86AudioMute spawn 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+
+  riverctl map $mode None XF86AudioPlay spawn 'playerctl --player=playerctld play-pause'
+  riverctl map $mode None XF86AudioPause spawn 'playerctl --player=playerctld play-pause'
+  riverctl map $mode None XF86AudioPrev spawn 'playerctl --player=playerctld previous'
+  riverctl map $mode None XF86AudioNext spawn 'playerctl --player=playerctld next'
+
+done
+
+# Set background and border color
+riverctl background-color 0x002b36
+riverctl border-color-focused 0x89b4fa
+riverctl border-color-unfocused 0x11111b
+
+# Set keyboard repeat rate
+riverctl set-repeat 50 300
+
+# Make all views with an app-id that starts with "float" and title "foo" start floating.
+riverctl rule-add -app-id 'float*' -title 'foo' float
+
+# Make all views with app-id "bar" and any title use client-side decorations
+riverctl rule-add -app-id "bar" csd
+
+# Set the default layout generator to be rivertile and start it.
+# River will send the process group of the init executable SIGTERM on exit.
+riverctl default-layout rivertile
+rivertile -view-padding 4 -outer-padding 4 &
+
+riverctl keyboard-layout "br(abnt2)"
+
+riverctl rule-add -app-id firefox ssd
+riverctl rule-add -app-id steam ssd
+riverctl rule-add -app-id thunar ssd
+riverctl rule-add -app-id spotube ssd
+riverctl rule-add -app-id mpv ssd
+riverctl rule-add -app-id virt-manager ssd
