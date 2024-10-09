@@ -23,7 +23,7 @@ local config = {
   text_background_opacity = 1.0,
   initial_cols = 170,
   initial_rows = 32,
-  enable_wayland = false,
+  enable_wayland = true,
   warn_about_missing_glyphs = false,
 }
 
