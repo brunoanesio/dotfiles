@@ -1,17 +1,17 @@
 return {
   {
-    "echasnovski/mini.bracketed",
+    "echasnovski/mini.nvim",
     version = false,
-    event = "BufReadPost",
-    opts = {},
-  },
-
-  {
-    "echasnovski/mini.hipatterns",
-    event = "BufReadPost",
-    version = false,
-    opts = {},
+    lazy = true,
     config = function()
+      require("mini.bracketed").setup()
+      require("mini.comment").setup()
+      require("mini.surround").setup()
+      require("mini.pick").setup()
+      require("mini.jump").setup()
+      require("mini.ai").setup()
+      require("mini.sessions").setup()
+      require("mini.files").setup()
       local hipatterns = require "mini.hipatterns"
       hipatterns.setup {
         highlighters = {
@@ -26,77 +26,13 @@ return {
         },
       }
     end,
-  },
-
-  {
-    "echasnovski/mini.comment",
-    version = false,
-    event = "BufReadPost",
-    opts = {},
-  },
-
-  {
-    "echasnovski/mini.surround",
-    version = false,
-    event = "BufReadPost",
-    opts = {},
-  },
-
-  {
-    "echasnovski/mini.pick",
-    version = false,
-    opts = {},
     keys = {
+      { "<leader>qs", "<cmd>lua MiniSessions.read()<cr>", desc = "Read Session" },
+      { "<leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Open Files" },
       { "<leader>ff", "<cmd>Pick files<cr>", desc = "Open Files" },
       { "<leader>,", "<cmd>Pick files<cr>", desc = "Open Files" },
       { "<leader>fg", "<cmd>Pick grep_live<cr>", desc = "Open Files" },
       { "<leader>.", "<cmd>Pick buffers<cr>", desc = "Open Files" },
-    },
-  },
-
-  {
-    "echasnovski/mini.jump",
-    version = false,
-    event = "BufReadPost",
-    opts = {},
-  },
-
-  {
-    "echasnovski/mini.ai",
-    version = false,
-    event = "BufReadPost",
-    opts = {},
-  },
-
-  {
-    "echasnovski/mini.sessions",
-    version = false,
-    opts = {},
-    keys = {
-      { "<leader>qs", "<cmd>lua MiniSessions.read()<cr>", desc = "Read Session" },
-    },
-  },
-
-  -- {
-  --   "echasnovski/mini.icons",
-  --   version = false,
-  --   event = "VeryLazy",
-  --   opts = {},
-  -- },
-
-  -- {
-  --   "echasnovski/mini.statusline",
-  --   version = false,
-  --   event = "VeryLazy",
-  --   opts = {},
-  -- },
-
-  {
-    "echasnovski/mini.files",
-    version = false,
-    opts = {},
-    keys = {
-      { "<leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Open Files" },
     },
   },
 }
