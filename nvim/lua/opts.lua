@@ -6,6 +6,7 @@ local options = {
   shiftwidth = 2,
   tabstop = 2,
   softtabstop = 2,
+  virtualedit = "block",
   hlsearch = true,
   incsearch = true,
   ignorecase = true,
@@ -41,19 +42,3 @@ vim.opt.whichwrap:append "<,>,[,],h,l"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
--- local os_name = vim.loop.os_uname().sysname
--- if os_name == "Windows_NT" then
---   vim.o.clipboard = {
---     name = "WslClipboard",
---     copy = {
---       ["+"] = "clip.exe",
---       ["*"] = "clip.exe",
---     },
---     paste = {
---       ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
---       ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
---     },
---     cache_enabled = 0,
---   }
--- end

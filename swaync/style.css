@@ -382,6 +382,7 @@ slider {
 
 .widget-mpris .widget-mpris-player {
   background: #313244;
+  margin-top: 5px;
   padding: 7px;
 }
 
