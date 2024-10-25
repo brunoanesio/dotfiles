@@ -3,8 +3,9 @@
 # Symlink configuration files
 symlinkconfig() {
   f="$1"
-  target="$HOME/.config/$f"
+  t="$2"
   source="$PWD"/"$f"
+  target="$HOME/$t/$(basename "$f")"
 
   # Check if the target already exists
   if [ -e "$target" ]; then
@@ -16,26 +17,22 @@ symlinkconfig() {
   fi
 }
 
-symlinkconfig kitty
-symlinkconfig alacritty
-symlinkconfig zsh
-symlinkconfig hypr
-symlinkconfig git
-symlinkconfig bat
-symlinkconfig dunst
-symlinkconfig rofi
-symlinkconfig swayimg
-symlinkconfig zathura
-
-# zshenv symlink
-if [ ! -e "$HOME/.zshenv" ] || [ ! -L "$HOME/.zshenv" ]; then
-  ln -s "$PWD/zshenv/.zshenv" "$HOME/.zshenv"
-fi
-
-# symlink scripts
-ln -s "$PWD/scripts/killwindow.sh" "$HOME/.local/bin/killwindow"
+symlinkconfig bat .config
+symlinkconfig dunst .config
+symlinkconfig git .config
+symlinkconfig kitty .config
+symlinkconfig nvim .config
+symlinkconfig river .config
+symlinkconfig rofi .config
+symlinkconfig scripts/killwindow .local/bin
+symlinkconfig swayimg .config
+symlinkconfig wlogout .config
+symlinkconfig yambar .config
+symlinkconfig zathura .config
+symlinkconfig zsh .config
+symlinkconfig zshenv/.zshenv .
 
 # setup waybar
-if [ ! -e "$HOME/.config/waybar" ] || [ ! -L "$HOME/.config/waybar" ]; then
-  git clone "https://github.com/brunoanesio/waybar.git" "$HOME/.config/waybar"
-fi
+# if [ ! -e "$HOME/.config/waybar" ] || [ ! -L "$HOME/.config/waybar" ]; then
+#   git clone "https://github.com/brunoanesio/waybar.git" "$HOME/.config/waybar"
+# fi

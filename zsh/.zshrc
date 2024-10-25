@@ -29,7 +29,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 export DOOMDIR="$XDG_CONFIG_HOME"/doom
 # . "/home/frost/.local/share/cargo/env"
-export PATH=$(go env GOPATH)/bin:$HOME/.spicetify:$HOME/.local/bin:$PATH
+export PATH=$(go env GOPATH)/bin:$HOME/.config/emacs/bin:$HOME/.spicetify:$HOME/.local/bin:$PATH
 
 # Aliases
 source $HOME/.config/zsh/aliases
@@ -108,3 +108,9 @@ export FZF_DEFAULT_OPTS=" \
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix

@@ -55,8 +55,14 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-path", "saadparwaiz1/cmp_luasnip", "hrsh7th/cmp-buffer" },
-    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
+    },
+    event = { "InsertEnter", "CmdlineEnter" },
     config = function()
       dofile(vim.g.base46_cache .. "cmp")
       local cmp = require "cmp"
@@ -116,6 +122,19 @@ return {
         -- },
       }
       options = vim.tbl_deep_extend("force", options, require "nvchad.cmp")
+      cmp.setup.cmdline(":", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = "path" },
+        }, {
+          {
+            name = "cmdline",
+            option = {
+              ignore_cmds = { "Man", "!" },
+            },
+          },
+        }),
+      })
       cmp.setup(options)
     end,
   },

@@ -7,7 +7,7 @@ M.base46 = {
 }
 
 M.ui = {
-  statusline = { theme = "vscode_colored", separator_style = "default" },
+  statusline = { theme = "default", separator_style = "default" },
   tabufline = { enabled = false },
   cmp = {
     -- icons_left = true,
