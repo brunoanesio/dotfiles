@@ -36,7 +36,7 @@ bar:
     - mem:
         poll-interval: 2500
         content:
-          string: { text: " {used:mb} MB", font: *font, foreground: *red }
+          string: { text: " {used:mb} Mb", font: *font, foreground: *red }
     - pipewire:
         anchors:
           volume: &volume
@@ -105,12 +105,4 @@ bar:
               ~activated: { empty: {} }
               activated:
                 - string: { text: "  {app-id}", foreground: *sapphire }
-                - string: { text: ": {title}" }
-  center:
-    - mpd:
-        host: /run/user/1000/mpd/socket
-        content:
-          map:
-            conditions:
-              state == playing:
-                string: { text: "{artist} - {title}", foreground: *magenta }
+                # - string: { text: ": {title}" }

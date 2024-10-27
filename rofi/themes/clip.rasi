@@ -1,7 +1,7 @@
 @theme "cat-mocha"
 @import "./colors.rasi"
 entry {
-  placeholder: "Search clipboard...";
+  placeholder: "  Search clipboard...";
 }
 element-icon {
   enabled: false;
