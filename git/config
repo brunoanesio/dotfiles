@@ -6,7 +6,7 @@
 	signingkey = 751694BF0684636D
 [core]
 	autocrlf = input
-	excludesfile = $HOME/.config/git/gitignore_global
+	excludesfile = /home/frost/.config/git/gitignore_global
 [credential]
 	helper = cache
 [commit]

@@ -17,6 +17,15 @@ symlinkconfig() {
   fi
 }
 
+# create .local/bin if it doesn't exist
+if [ ! -d "$HOME/.local/bin" ]; then
+  mkdir -p "$HOME/.local/bin"
+fi
+# and .config
+if [ ! -d "$HOME/.config" ]; then
+  mkdir -p "$HOME/.config"
+fi
+
 symlinkconfig bat .config
 symlinkconfig dunst .config
 symlinkconfig git .config
