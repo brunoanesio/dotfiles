@@ -29,6 +29,7 @@ return {
   },
   config = function()
     dofile(vim.g.base46_cache .. "lsp")
+    vim.highlight.priorities.semantic_tokens = 94
     vim.api.nvim_create_autocmd("LspAttach", {
       desc = "LSP actions",
       callback = function(event)
