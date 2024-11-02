@@ -1,4 +1,9 @@
 return {
+  nil_ls = {
+    settings = {
+      ["nil"] = { formatting = { command = { "nixfmt" } } },
+    },
+  },
   lua_ls = {
     settings = {
       Lua = {
