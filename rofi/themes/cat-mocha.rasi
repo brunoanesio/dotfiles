@@ -73,5 +73,5 @@ element-text {
   cursor: inherit;
   vertical-align: 0.5;
   horizontal-align: 0.0;
-  font: "Poppins Medium 16px";
+  font: "Lexend Medium 16px";
 }

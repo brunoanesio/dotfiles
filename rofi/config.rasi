@@ -1,6 +1,6 @@
 configuration {
   modi: "drun";
-  font: "Poppins Medium 16px";
+  font: "Lexend Medium 16px";
   show-icons: true;
   terminal: "kitty";
   icon-theme: "Papirus";
