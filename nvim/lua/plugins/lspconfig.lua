@@ -29,7 +29,7 @@ return {
   },
   config = function()
     dofile(vim.g.base46_cache .. "lsp")
-    vim.highlight.priorities.semantic_tokens = 94
+    -- vim.highlight.priorities.semantic_tokens = 94
     vim.api.nvim_create_autocmd("LspAttach", {
       desc = "LSP actions",
       callback = function(event)
@@ -56,19 +56,21 @@ return {
     require("mason").setup()
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-      "lua_ls",
-      "stylua",
       "basedpyright",
-      "gopls",
+      "bashls",
+      "clang-format",
+      "clangd",
+      "css-lsp",
       "goimports",
       "golines",
+      "gopls",
+      "json-lsp",
+      "lua_ls",
       "prettierd",
       "ruff",
-      "bashls",
       "shellcheck",
       "shfmt",
-      "clangd",
-      "clang-format",
+      "stylua",
     })
     require("mason-tool-installer").setup { ensure_installed = ensure_installed }
     require("mason-lspconfig").setup {
