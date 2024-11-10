@@ -13,14 +13,14 @@ return {
         telemetry = { enable = false },
         completion = { callSnippet = "Replace" },
         diagnostics = {
-          globals = { "vim", "awesome", "awful", "client", "screen", "tag", "root" },
+          globals = { "vim" },
         },
         workspace = {
           library = vim.tbl_deep_extend("force", vim.api.nvim_get_runtime_file("", true), {
             vim.fn.expand "$VIMRUNTIME/lua",
             vim.fn.expand "$VIMRUNTIME/lua/vim/lsp",
-            "${3rd}/luv/library",
-            "${3rd}/busted/library",
+            -- "${3rd}/luv/library",
+            -- "${3rd}/busted/library",
             -- "/usr/share/awesome/lib",
             -- "/usr/share/lua",
           }),

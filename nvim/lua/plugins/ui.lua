@@ -4,7 +4,6 @@ return {
 
   {
     "nvchad/ui",
-    event = "VeryLazy",
     config = function()
       require "nvchad"
     end,
