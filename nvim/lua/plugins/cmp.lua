@@ -27,6 +27,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-buffer",
@@ -43,6 +44,7 @@ return {
           { name = "codeium" },
           { name = "luasnip" },
           { name = "nvim_lsp" },
+          { name = "nvim_lua" },
           { name = "buffer" },
           { name = "path" },
         },
