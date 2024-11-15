@@ -56,4 +56,9 @@ return {
       },
     },
   },
+  jsonls = {
+    settings = {
+      init_options = { allowTrailingCommas = true, allowComments = true, provideFormatter = false },
+    },
+  },
 }
