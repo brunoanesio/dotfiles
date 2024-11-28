@@ -21,8 +21,8 @@ map("v", "K", ":m '<-2<CR>gv=gv", opts)
 -- Normal mappings
 map("n", "J", "mzJ`z", opts)
 -- paste remap
--- map("v", "<leader>p", '"_dp')
--- map("v", "<leader>P", '"_dP')
+map("v", "<leader>p", '"_dp')
+map("v", "<leader>P", '"_dP')
 map({ "n", "x" }, "<leader>p", [["0p]])
 -- clipboard
 map("n", "<leader>y", '"+y')
@@ -37,6 +37,3 @@ map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
 map("n", "<leader>pl", "<CMD>Lazy<CR>", opts)
-map("n", "<leader>th", function()
-  require("base46").toggle_transparency()
-end, opts)

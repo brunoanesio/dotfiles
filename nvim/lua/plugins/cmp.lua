@@ -35,7 +35,6 @@ return {
     },
     event = { "InsertEnter", "CmdlineEnter" },
     config = function()
-      dofile(vim.g.base46_cache .. "cmp")
       local cmp = require "cmp"
       local luasnip = require "luasnip"
 
@@ -80,20 +79,19 @@ return {
           end,
         },
         experimental = { ghost_text = true },
-        -- window = {
-        --   completion = cmp.config.window.bordered {
-        --     scrollbar = true,
-        --     border = "single",
-        --     col_offset = -1,
-        --     side_padding = 0,
-        --   },
-        --   documentation = cmp.config.window.bordered {
-        --     scrollbar = true,
-        --     border = "single",
-        --   },
-        -- },
+        window = {
+          completion = cmp.config.window.bordered {
+            scrollbar = true,
+            border = "single",
+            col_offset = -1,
+            side_padding = 0,
+          },
+          documentation = cmp.config.window.bordered {
+            scrollbar = true,
+            border = "single",
+          },
+        },
       }
-      options = vim.tbl_deep_extend("force", options, require "nvchad.cmp")
       cmp.setup.cmdline(":", {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({

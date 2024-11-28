@@ -12,6 +12,7 @@ return {
       require("mini.ai").setup()
       require("mini.sessions").setup()
       require("mini.files").setup()
+      require("mini.icons").setup()
       local hipatterns = require "mini.hipatterns"
       hipatterns.setup {
         highlighters = {
