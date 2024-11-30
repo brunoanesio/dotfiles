@@ -17,6 +17,7 @@ return {
       sh = { "shfmt" },
       bash = { "shfmt" },
       cpp = { "clang-format" },
+      rust = { "rustfmt" },
     },
 
     formatters = {

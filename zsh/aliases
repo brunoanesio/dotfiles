@@ -11,6 +11,8 @@ alias exg='exa -la --git'
 alias tree="exa --tree --level=2"
 
 # Misc
+alias 60hz='hyprctl keyword monitor HDMI-A-1,1920x1080@60,auto,1'
+alias 75hz='hyprctl keyword monitor HDMI-A-1,1920x1080@75,auto,1'
 alias grep='grep -i --color=auto'
 alias rg='rg -i'
 alias v='nvim'
