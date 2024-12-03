@@ -13,7 +13,7 @@ return {
       require("mini.sessions").setup()
       require("mini.files").setup()
       require("mini.icons").setup()
-      require("mini.statusline").setup()
+      -- require("mini.statusline").setup()
       local hipatterns = require "mini.hipatterns"
       hipatterns.setup {
         highlighters = {
