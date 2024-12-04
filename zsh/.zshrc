@@ -110,7 +110,7 @@ export FZF_DEFAULT_OPTS=" \
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # Nix
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
+# if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+#   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+# fi
 # End Nix
