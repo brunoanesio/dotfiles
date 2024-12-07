@@ -19,6 +19,7 @@ return {
       bash = { "shfmt" },
       cpp = { "clang-format" },
       rust = { "rustfmt" },
+      toml = { "taplo" },
     },
 
     formatters = {
