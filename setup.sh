@@ -39,7 +39,7 @@ symlinkconfig zathura .config
 symlinkconfig zsh .config
 symlinkconfig zshenv/.zshenv .
 
-setup waybar
+# setup waybar
 if [ ! -e "$HOME/.config/waybar" ] || [ ! -L "$HOME/.config/waybar" ]; then
   git clone "https://github.com/brunoanesio/waybar.git" "$HOME/.config/waybar"
 fi
